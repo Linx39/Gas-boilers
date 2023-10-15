@@ -1,0 +1,53 @@
+.contacts {
+  .list();
+
+  display: grid;
+  gap: 44px;
+  justify-items: center;
+
+}
+
+.contacts__item {
+  &--adress {
+    display: none;
+  }
+
+  &--schedule {
+    display: none;
+  }
+
+  &--phone {
+    order: 2;
+
+    padding-top: 40px;
+
+    font-size: 30px;
+    line-height: 41px;
+    font-weight: 800;
+
+    background-image: url("../../img/contacts/phone.svg");
+    background-size: 30px 30px;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  &--email {
+    display: none;
+  }
+
+  &--social {
+    justify-self: end;
+  }
+}
+
+.contacts__item--phone {
+
+}
+
+.contacts__social-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 42px);
+  gap: 16px;
+
+  width: 158px;
+}
