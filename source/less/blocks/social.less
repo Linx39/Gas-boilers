@@ -1,28 +1,77 @@
-.social {
- .list();
+.social__list {
+  .list();
 }
 
-.social-item {
+.social__link {
+  .button();
+
   width: 42px;
   height: 42px;
 
-  border: 1px solid @color-blue;
+  // border: 1px solid @color-grey;
   border-radius: 5px;
   background-color: @color-white;
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-width: @desktop-width) {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 2px;
+  }
+
   &--vk {
     background-image: url("../../img/social/vk.svg");
     background-size: 21px 13px;
+
+    @media (min-width: @desktop-width) {
+      background-size: 15px 9px;
+    }
+
+    &:hover {
+      background-color: @color-vk;
+    }
+
+    &:active {
+      background-color: @color-vk;
+      opacity: 0.3;
+    }
   }
+
   &--whatsapp {
     background-image: url("../../img/social/whatsapp.svg");
     background-size: 26px 26px;
+
+    @media (min-width: @desktop-width) {
+      background-size: 18px 18px;
+    }
+
+    &:hover {
+      background-color: @color-whatsapp;
+    }
+
+    &:active {
+      background-color: @color-whatsapp;
+      opacity: 0.3;
+    }
   }
 
   &--viber {
     background-image: url("../../img/social/viber.svg");
     background-size: 24px 23px;
+
+    @media (min-width: @desktop-width) {
+      background-size: 15px 15px;
+    }
+
+    &:hover {
+      background-color: @color-viber;
+    }
+
+    &:active {
+      background-color: @color-viber;
+      opacity: 0.3;
+    }
   }
 }

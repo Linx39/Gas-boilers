@@ -2,7 +2,7 @@
   .button();
 
   width: 240px;
-  padding: 16px 30px 17px 67px;
+  padding: 16px 20px 17px 68px;
 
   color: @color-white;
   background-color: @color-blue;
@@ -11,6 +11,8 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
+  letter-spacing: -0.04em;
+  text-align: left;
 
   background-position: left 28px center;
   background-repeat: no-repeat;
@@ -30,7 +32,12 @@
     background-size: 24px 24px;
   }
 
-  @media (min-width: @desktop-width) {
+  &:hover {
+    background-color: @color-dark-blue;
   }
 
+  &:active {
+    background-color: @color-dark-blue;
+    opacity: 0.3;
+  }
 }

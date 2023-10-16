@@ -9,7 +9,6 @@
   line-height: 39px;
   font-weight: 800;
 
-
   @media (min-width: @desktop-width) {
   }
 }
@@ -24,4 +23,47 @@
   background-size: 37px 42px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.main-nav__contacts-list {
+  display: grid;
+  gap: 44px;
+  justify-items: center;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    min-height: 57px;
+  }
+}
+
+.main-nav__contacts-item {
+  margin-right: 44px;
+
+  &:first-of-type {
+    margin-right: 42px;
+  }
+
+  &:nth-last-of-type(2) {
+    margin-right: 78px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.main-nav__site-list {
+  display: flex;
+  max-width: 980px;
+}
+
+.main-nav__site-list-item {
+  margin-right: 26px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
