@@ -27,6 +27,16 @@ export const html = () => {
     .pipe(browser.stream()); //?????
 }
 
+// Scripts
+
+export const scripts = () => {
+  return gulp.src('source/js/app.js')
+    // .pipe(terser())
+    // .pipe(rename('app.min.js'))
+    // .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
+
 // Server
 
 const server = (done) => {
@@ -52,11 +62,11 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/js/app.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
-  // gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 
 export default gulp.series(
-  styles, html, server, watcher
+  styles, scripts, html, server, watcher
 );

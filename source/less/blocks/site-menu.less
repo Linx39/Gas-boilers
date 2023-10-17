@@ -9,16 +9,21 @@
 
 .site-menu__link {
   .button();
-  padding: 16px 0 17px 0;
+  padding: 5px 0;
 
   text-align: left;
 
   &:hover {
-    color: @color-blue;
+    color: @color-dark-blue;
   }
 
   &:active {
     color: @color-dark-blue;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 16px 0 17px 0;
   }
 }
 

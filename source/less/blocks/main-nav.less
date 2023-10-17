@@ -1,51 +1,49 @@
 .main-nav {
-  min-height: 309px;
+  // position: relative;
+  min-height: 309px; //??? после добавления блоков посмотреть нужно ли
 
   @media (min-width: @desktop-width) {
     min-height: auto;
   }
 }
 
-.main-nav__container {
+.main-nav__wrapper {
   position: relative;
-  padding-top: 26px;
 }
 
-.main-nav--opened .main-nav__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
+.main-nav--opened .main-nav__wrapper {
+  @media (max-width: (@desktop-width - 1)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
-  width: 100%;
-  background-color: @color-blue;
-}
-
-.main-nav__contacts-title {
-  font-size: 32px;
-  line-height: 39px;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.main-nav--closed .main-nav__contacts-title {
-  display: none;
+    width: 430px;
+    background-color: @color-blue;
+  }
 }
 
 .main-nav__toggle-container {
   position: absolute;
-  top: 29px;
-  left: @mobile-padding;
+  z-index: 1;
 
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
+.main-nav--closed .main-nav__toggle-container {
+  top: 26px;
+  left: @mobile-padding;
+}
+
+.main-nav--opened .main-nav__toggle-container {
+  top: 13px;
+  right: 35px;
+}
+
 .main-nav__toggle {
   .button();
-
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -66,7 +64,84 @@
   background-color: @color-white;
   background-image: url("../../img/btn-close.svg");
   background-size: 15px 15px;
-  background-position: center;
+}
+
+.main-nav__contacts {
+  .wrapper();
+
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 33px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 21px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 180px);
+    height: 0;
+    border-bottom: 2px solid @color-white;
+    margin: 0 auto;
+    content: "";
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      border-bottom: 1px solid @color-white;
+    }
+  }
+}
+
+.main-nav--opened .main-nav__contacts {
+  @media (max-width: (@desktop-width - 1)) {
+    padding-top: 81px;
+    padding-bottom: 30px;
+  }
+}
+
+.main-nav__contacts-title {
+  display: none;
+  margin: 0;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-nav--opened .main-nav__contacts-title {
+  @media (max-width: (@desktop-width - 1)) {
+    display: block;
+    margin-bottom: 23px;
+  }
+}
+
+.main-nav__logo-container {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-right: 105px;
+  }
+}
+
+.main-nav__logo {
+  .button();
+  width: 146px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .main-nav__contacts-list {
@@ -177,7 +252,19 @@
   }
 }
 
+.main-nav--opened .main-nav__contacts-item {
+  &--email {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+}
+
 .main-nav__site-menu {
+  .wrapper();
+  padding-top: 25px;
+
   @media (min-width: @desktop-width) {
     padding-top: 20px;
   }
