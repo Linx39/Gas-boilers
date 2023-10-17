@@ -1,17 +1,22 @@
 .main-nav {
-  // position: relative;
-  min-height: 309px; //??? после добавления блоков посмотреть нужно ли
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 @mobile-padding;
+  padding-top: 26px;
+  padding-bottom: 26px;
 
   @media (min-width: @desktop-width) {
-    min-height: auto;
+    padding: 0;
   }
 }
 
-.main-nav__wrapper {
-  position: relative;
+.main-nav--opened {
+  justify-content: end;
 }
 
-.main-nav--opened .main-nav__wrapper {
+.main-nav--opened .main-nav__bar {
   @media (max-width: (@desktop-width - 1)) {
     position: absolute;
     top: 0;
@@ -25,6 +30,8 @@
 
 .main-nav__toggle-container {
   position: absolute;
+  top: 26px;
+  left: @mobile-padding;
   z-index: 1;
 
   @media (min-width: @desktop-width) {
@@ -32,28 +39,22 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle-container {
-  top: 26px;
-  left: @mobile-padding;
-}
-
 .main-nav--opened .main-nav__toggle-container {
   top: 13px;
   right: 35px;
+  left: auto;
 }
 
 .main-nav__toggle {
   .button();
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-.main-nav--closed .main-nav__toggle {
   width: 42px;
   height: 37px;
 
   background-image: url("../../img/btn-open.svg");
   background-size: 42px 37px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -66,17 +67,35 @@
   background-size: 15px 15px;
 }
 
-.main-nav__contacts {
-  .wrapper();
+.main-nav__logo-container {
+  display: none;
 
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-right: 105px;
+  }
+}
+
+.main-nav__logo {
+  .button();
+  width: 146px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.main-nav__contacts {
   position: relative;
-  padding-top: 26px;
-  padding-bottom: 33px;
+  display: none;
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 0 @desktop-padding;
     padding-top: 22px;
     padding-bottom: 21px;
   }
@@ -101,6 +120,8 @@
 
 .main-nav--opened .main-nav__contacts {
   @media (max-width: (@desktop-width - 1)) {
+    display: block;
+    padding: 0 @mobile-padding;
     padding-top: 81px;
     padding-bottom: 30px;
   }
@@ -123,32 +144,7 @@
   }
 }
 
-.main-nav__logo-container {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    margin-right: 105px;
-  }
-}
-
-.main-nav__logo {
-  .button();
-  width: 146px;
-
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  text-align: left;
-}
-
 .main-nav__contacts-list {
-  display: grid;
-  gap: 23px;
-  justify-items: left;
-
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -156,9 +152,11 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0;
+    width: 757px;
     min-height: 57px;
 
     font-size: 14px;
@@ -168,87 +166,11 @@
   }
 }
 
-.main-nav--closed .main-nav__contacts-list {
+.main-nav--opened .main-nav__contacts-list {
   @media (max-width: (@desktop-width - 1)) {
-    gap: 44px;
-    justify-items: center;
-
-    font-size: 30px;
-    line-height: 41px;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-  }
-}
-
-.main-nav__contacts-item {
-  @media (max-width: (@desktop-width - 1)) {
-    &--social {
-      display: none;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 44px;
-
-    &:first-of-type {
-      margin-right: 42px;
-    }
-
-    &:nth-last-of-type(2) {
-      margin-right: 78px;
-    }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-}
-
-.main-nav--closed .main-nav__contacts-item {
-  @media (max-width: (@desktop-width - 1)) {
-    padding-left: 0;
-    padding-top: 40px;
-
-    background-size: 30px 30px;
-    background-position: top center;
-
-    &--social {
-      display: block;
-      justify-self: end;
-      padding-top: 0;
-    }
-  }
-
-  &--adress {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
-  }
-
-  &--schedule {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
-  }
-
-  &--phone {
-    order: 2;
-
-    @media (min-width: @desktop-width) {
-      order: 0;
-    }
-  }
-
-  &--email {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
+    display: grid;
+    gap: 23px;
+    justify-items: left;
   }
 }
 
@@ -262,17 +184,20 @@
 }
 
 .main-nav__site-menu {
-  .wrapper();
-  padding-top: 25px;
+  display: none;
 
   @media (min-width: @desktop-width) {
+    display: block;
+    padding: 0 @desktop-padding;
     padding-top: 20px;
   }
 }
 
-.main-nav--closed .main-nav__site-menu {
+.main-nav--opened .main-nav__site-menu {
   @media (max-width: (@desktop-width - 1)) {
-    display: none;
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 30px;
   }
 }
 
@@ -294,5 +219,25 @@
     &:last-of-type {
       margin-right: 0;
     }
+  }
+}
+
+.main-nav__social {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 22px;
+    right: @desktop-padding;
+  }
+}
+
+.main-nav__social-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 6px;
+  width: 138px;
+
+  @media (min-width: @desktop-width) {
+    gap: 5px;
+    width: 100px;
   }
 }

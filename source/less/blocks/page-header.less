@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 18px;
 
   @media (min-width: @desktop-width) {
     padding-top: 81px;
@@ -50,6 +51,35 @@
     line-height: 75px;
     letter-spacing: -0.04em;
   }
+}
+
+.page-header__phone {
+  order: -1;
+  margin-bottom: 34px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__phone-list {
+  .list();
+
+  padding-top: 40px;
+
+  background-image: url("../../img/contacts/phone.svg");
+  background-size: 30px 30px;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  font-size: 30px;
+  line-height: 41px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.page-header__phone-link {
+  .button();
 }
 
 .page-header__buttons-container {
