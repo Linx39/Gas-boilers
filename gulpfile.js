@@ -3,6 +3,8 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import rename from 'gulp-rename';
+import svgstore from 'gulp-svgstore';
 import browser from 'browser-sync';
 
 // Styles
@@ -21,10 +23,10 @@ export const styles = () => {
 // HTML
 
 export const html = () => {
-  return gulp.src('source/*.html')
+  return gulp.src('source/*.html');
     // .pipe(htmlmin({ collapseWhitespace: true }))
     // .pipe(gulp.dest('build'))
-    .pipe(browser.stream()); //?????
+    // .pipe(browser.stream()); //?????
 }
 
 // Scripts
@@ -35,6 +37,18 @@ export const scripts = () => {
     // .pipe(rename('app.min.js'))
     // .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
+}
+
+// Sprite
+
+export const sprite = () => {
+  return gulp.src('source/img/sprite/*.svg')
+    // .pipe(imagemin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('source/img'));
 }
 
 // Server

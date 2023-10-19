@@ -1,60 +1,73 @@
+.contacts__title {
+  align-items: center;
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .contacts__list {
   .list();
+  display: grid;
+  gap: 23px;
+  width: 240px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.contacts--header .contacts__list {
+  @media (min-width: @desktop-width) {
+    width: auto;
+
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+  }
 }
 
 .contacts__item {
-  &--adress {
-    padding-left: 29px;
-
-    background-image: url("../../img/contacts/place.svg");
-    background-size: 13px 15px;
-    background-position: left center;
-    background-repeat: no-repeat;
-
-    @media (min-width: @desktop-width) {
-      padding-left: 26px;
-    }
-  }
-
-  &--schedule {
-    padding-left: 29px;
-
-    background-image: url("../../img/contacts/time.svg");
-    background-size: 13px 15px;
-    background-position: left center;
-    background-repeat: no-repeat;
-
-    @media (min-width: @desktop-width) {
-      padding-left: 31px;
-    }
-  }
-
-  &--phone {
-    padding-left: 30px;
-
-    background-image: url("../../img/contacts/phone.svg");
-    background-size: 15px 15px;
-    background-position: left center;
-    background-repeat: no-repeat;
-
-    @media (min-width: @desktop-width) {
-      padding-top: 0;
-      padding-left: 28px;
-    }
-  }
+  position: relative;
+  padding-left: 29px;
 
   &--email {
-    padding-left: 29px;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+}
 
-    background-image: url("../../img/contacts/mail.svg");
-    background-size: 15px 15px;
-    background-position: left center;
-    background-repeat: no-repeat;
+.contacts--header .contacts__item {
+  @media (min-width: @desktop-width) {
+    &--adress {
+      padding-left: 26px;
+    }
 
-    @media (min-width: @desktop-width) {
+    &--schedule {
+      padding-left: 31px;
+    }
+
+    &--phone {
+      padding-left: 28px;
+    }
+
+    &--email {
       padding-left: 26px;
     }
   }
+
+}
+
+.contacts__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom:0;
+  margin: auto 0;
 }
 
 .contacts__schedule-list {
@@ -71,4 +84,14 @@
 
 .contacts__link {
   .button();
+  text-align: left;
+
+  &:hover {
+    color: @color-dark-blue;
+  }
+
+  &:active {
+    color: @color-dark-blue;
+    opacity: 0.3;
+  }
 }

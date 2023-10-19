@@ -8,26 +8,14 @@
   width: 42px;
   height: 42px;
 
-  // border: 1px solid @color-grey;
   border-radius: 2px;
   background-color: @color-white;
   background-repeat: no-repeat;
   background-position: center;
 
-  @media (min-width: @desktop-width) {
-    width: 30px;
-    height: 30px;
-
-    border-radius: 2px;
-  }
-
   &--vk {
     background-image: url("../../img/social/vk.svg");
     background-size: 21px 13px;
-
-    @media (min-width: @desktop-width) {
-      background-size: 15px 9px;
-    }
 
     &:hover {
       background-color: @color-vk;
@@ -43,10 +31,6 @@
     background-image: url("../../img/social/whatsapp.svg");
     background-size: 26px 26px;
 
-    @media (min-width: @desktop-width) {
-      background-size: 18px 18px;
-    }
-
     &:hover {
       background-color: @color-whatsapp;
     }
@@ -61,10 +45,6 @@
     background-image: url("../../img/social/viber.svg");
     background-size: 24px 23px;
 
-    @media (min-width: @desktop-width) {
-      background-size: 15px 15px;
-    }
-
     &:hover {
       background-color: @color-viber;
     }
@@ -74,4 +54,29 @@
       opacity: 0.3;
     }
   }
+}
+
+.social--header .social__link {
+  @media (min-width: @desktop-width) {
+    width: 30px;
+    height: 30px;
+
+    &--vk {
+      background-size: 15px 9px;
+    }
+
+    &--whatsapp {
+      background-size: 18px 18px;
+    }
+
+    &--viber {
+      background-size: 15px 15px;
+    }
+  }
+
+}
+
+.social--footer .social__link {
+  border-radius: 5px;
+  border: 1px solid @color-grey;
 }
