@@ -9,11 +9,17 @@
 
   <body class="page__body">
     <header class="page-header">
-      <nav class="page-header__nav main-nav main-nav--closed">
+      <nav class="main-nav main-nav--closed">
         <div class="main-nav__bar">
           <div class="main-nav__top-bar">
             <div class="main-nav__toggle-container">
               <button class="main-nav__toggle" type="button">
+                <svg class="main-nav__toggle-icon main-nav__toggle-icon--open" width="42" height="37" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-open"></use>
+                </svg>
+                <svg class="main-nav__toggle-icon main-nav__toggle-icon--close" width="15" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-close"></use>
+                </svg>
                 <span class="visually-hidden">Кнопка навигации</span>
               </button>
             </div>
