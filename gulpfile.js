@@ -4,6 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import rename from 'gulp-rename';
+import webp from 'gulp-webp';
 import svgstore from 'gulp-svgstore';
 import browser from 'browser-sync';
 
@@ -37,6 +38,14 @@ export const scripts = () => {
     // .pipe(rename('app.min.js'))
     // .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
+}
+
+// WebP
+
+export const createWebp = () => {
+  return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/*'])
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest('source/img'))
 }
 
 // Sprite
@@ -81,6 +90,23 @@ const watcher = () => {
 }
 
 
+// export default gulp.series(
+//   styles, scripts, html, server, watcher
+// );
+
 export default gulp.series(
-  styles, scripts, html, server, watcher
-);
+  // clean,
+  // copy,
+  // copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
+

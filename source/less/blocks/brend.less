@@ -1,0 +1,29 @@
+.brend {
+
+}
+
+.brend__list {
+  .list();
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  gap: 28px;
+
+  @media (min-width: @desktop-width) {
+    gap: 83px;
+  }
+}
+
+.brend__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+
+  border: 4px solid @color-blue;
+  border-radius: 20px;
+}
+
+.brend__img {
+  // margin: auto;
+}

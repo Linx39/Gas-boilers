@@ -72,13 +72,14 @@
   gap: 16px;
 }
 
-.page-footer__button-container {
+.page-footer__content-button-container {
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
 .page-footer__map {
+  position: relative;
   width: 100%;
 
   @media (min-width: @desktop-width) {
@@ -95,4 +96,10 @@
     // width: 990px;
     // height: 440px;
   }
+}
+
+.page-footer__map-button-container {
+  position: absolute;
+  right: 30px;
+  bottom: 26px;
 }
