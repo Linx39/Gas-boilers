@@ -20,10 +20,8 @@
   font-weight: 500;
 }
 
-.contacts--header .contacts__list {
+.contacts--desktop-nav .contacts__list {
   @media (min-width: @desktop-width) {
-    width: auto;
-
     font-size: 14px;
     line-height: 19px;
     font-weight: 500;
@@ -41,9 +39,10 @@
   }
 }
 
-.contacts--header .contacts__item {
+.contacts--desktop-nav .contacts__item {
   @media (min-width: @desktop-width) {
     &--adress {
+      max-width: 193px;
       padding-left: 26px;
     }
 
@@ -59,14 +58,13 @@
       padding-left: 26px;
     }
   }
-
 }
 
 .contacts__icon {
   position: absolute;
   left: 0;
   top: 0;
-  bottom:0;
+  bottom: 0;
   margin: auto 0;
 }
 
