@@ -5,15 +5,20 @@
 .brend__list {
   .list();
   display: grid;
-  grid-template-columns: repeat(auto-fit, 240px);
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-auto-flow: column;
   gap: 28px;
+  justify-content: start;
 
   @media (min-width: @desktop-width) {
+    grid-auto-flow: unset;
     gap: 83px;
+    justify-content: center;
   }
 }
 
 .brend__item {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;

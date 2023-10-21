@@ -67,20 +67,29 @@
               </ul>
             </div>
 
-            <div class="main-nav__social social social--desktop-nav">
+            <div class="main-nav__social social social--small">
               <ul class="main-nav__social-list social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vk">
+                    <svg class="social__icon" width="22" height="14" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg>
                     <span class="visually-hidden">VK</span>
                   </a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--whatsapp">
+                    <svg class="social__icon" width="26" height="26" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#whatsapp"></use>
+                    </svg>
                     <span class="visually-hidden">Whatsapp</span>
                   </a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--viber">
+                    <svg class="social__icon" width="24" height="23" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#viber"></use>
+                    </svg>
                     <span class="visually-hidden">Viber</span>
                   </a>
                 </li>
@@ -136,52 +145,133 @@
 
 
     <main class="page-main">
-      <section class="catalog">
-        <div class="products">
-          <h2 class="products__title">Газовые котлы ведущих производителей</h2>
+      <section class="catalog-products">
+        <div class="catalog">
+          <h2 class="catalog__title">Газовые котлы ведущих производителей</h2>
 
-          <div class="products__brend brend">
-            <ul class="products__brend-list brend__list">
-              <li class="brend__item">
-                <div class="brend__img">
-                  <picture>
-                    <source type="image/webp" srcset="img/brends/thermex-logo.webp 1x, img/brends/thermex-logo@2x.webp 2x">
-                    <img src="img/brends/thermex-logo.png" srcset="img/brends/thermex-logo@2x.png 2x" alt="Логотип компании Thermex">
-                  </picture>
+          <div class="catalog__brend brend slider">
+            <div class="catalog__brend-container">
+              <ul class="catalog__brend-list brend__list slider__list">
+                <li class="brend__item slider__item slider__item--current">
+                  <div class="brend__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/brends/thermex-logo.webp 1x, img/brends/thermex-logo@2x.webp 2x">
+                      <img src="img/brends/thermex-logo.png" srcset="img/brends/thermex-logo@2x.png 2x" alt="Логотип компании Thermex">
+                    </picture>
+                  </div>
+                </li>
+                <li class="brend__item slider__item">
+                  <div class="brend__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/brends/mizudo-logo.webp 1x, img/brends/mizudo-logo@2x.webp 2x">
+                      <img src="img/brends/mizudo-logo.png" srcset="img/brends/mizudo-logo@2x.png 2x" alt="Логотип компании Mizudo">
+                    </picture>
+                  </div>
+                </li>
+                <li class="brend__item slider__item">
+                  <div class="brend__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/brends/navein-logo.webp 1x, img/brends/navein-logo@2x.webp 2x">
+                      <img src="img/brends/navein-logo.png" srcset="img/brends/navein-logo@2x.png 2x" alt="Логотип компании Navein">
+                    </picture>
+                  </div>
+                </li>
+                <li class="brend__item slider__item">
+                  <div class="brend__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/brends/baxi-logo.webp 1x, img/brends/baxi-logo@2x.webp 2x">
+                      <img src="img/brends/baxi-logo.png" srcset="img/brends/baxi-logo@2x.png 2x" alt="Логотип компании Baxi">
+                    </picture>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="catalog__toggles-container">
+              <ul class="catalog__toggles slider__toggles">
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle slider__toggle--current" type="button">
+                    <span class="visually-hidden">1</span>
+                  </button>
+                </li>
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">2</span>
+                  </button>
+                </li>
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">3</span>
+                  </button>
+                </li>
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">3</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="catalog__products products">
+            <ul class="products__list">
+              <li class="products__item">
+                <div class="products__card">
+                  <div class="products__img">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/thermex-desktop.webp 1x, img/products-1/thermex-desktop@2x.webp 2x">
+                      <source type="image/webp" srcset="img/products-1/thermex-mobile.webp 1x, img/products-1/thermex-mobile@2x.webp 2x">
+                      <source media="(min-width: 1300px)" srcset="img/products-1/thermex-desktop.png 1x, img/products-1/thermex-desktop@2x.jpg 2x">
+                      <img src="img/products-1/thermex-mobile.png" srcset="img/products-1/thermex-mobile@2x.png 2x" alt="Фото товара.">
+                    </picture>
+                  </div>
+
+                  <div class="products__content">
+                    <h3 class="products__title">Газовые котлы thermex</h3>
+
+                    <p class="products__description">
+                      <span class="products__brend">Thermex GazPro</span>  -  инжиниринговый дивизион международной корпорации Thermex, специализирующийся на профессиональном инженерном оборудовании HVAC и охватывающий огромный спектр решений по отоплению, ГВС и автоматизации любого объекта недвижимости
+                    </p>
+
+                    <span class="products__price">Цена под запрос</span>
+                  </div>
                 </div>
-              </li>
-              <li class="brend__item">
-                <div class="brend__img">
-                  <picture>
-                    <source type="image/webp" srcset="img/brends/mizudo-logo.webp 1x, img/brends/mizudo-logo@2x.webp 2x">
-                    <img src="img/brends/mizudo-logo.png" srcset="img/brends/mizudo-logo@2x.png 2x" alt="Логотип компании Mizudo">
-                  </picture>
-                </div>
-              </li>
-              <li class="brend__item">
-                <div class="brend__img">
-                  <picture>
-                    <source type="image/webp" srcset="img/brends/navein-logo.webp 1x, img/brends/navein-logo@2x.webp 2x">
-                    <img src="img/brends/navein-logo.png" srcset="img/brends/navein-logo@2x.png 2x" alt="Логотип компании Navein">
-                  </picture>
-                </div>
-              </li>
-              <li class="brend__item">
-                <div class="brend__img">
-                  <picture>
-                    <source type="image/webp" srcset="img/brends/baxi-logo.webp 1x, img/brends/baxi-logo@2x.webp 2x">
-                    <img src="img/brends/baxi-logo.png" srcset="img/brends/baxi-logo@2x.png 2x" alt="Логотип компании Baxi">
-                  </picture>
+
+                <div class="products__info">
+                  <span class="products__rating">5</span>
+
+                  <h4 class="products__info-title">Получи индивидуальное предложение</p>
+
+                  <div class="products__buttons-container">
+                    <button class="products__button app-button app-button--staff" type="button">Консультация</button>
+                    <button class="products__button app-button app-button--buy" type="button">Купить сейчас</button>
+                  </div>
+
+                  <h4 class="products__info-title">Написать нам в соц.сети</h4>
+
+                  <div class="products__social social social--small">
+                    <ul class="products__social-list social__list">
+                      <li class="social__item">
+                        <a class="social__link social__link--vk">
+                          <span class="visually-hidden">VK</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--whatsapp">
+                          <span class="visually-hidden">Whatsapp</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--viber">
+                          <span class="visually-hidden">Viber</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
-
-          <div class="products">
-            <ul class="products__list">
-
-            </ul>
-        </div>
         </div>
       </section>
 

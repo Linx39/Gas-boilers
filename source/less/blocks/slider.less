@@ -1,0 +1,28 @@
+.slider__toggles {
+  .list();
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 12px);
+  gap: 12px;
+}
+
+.slider__toggle {
+  .button();
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+  background-color: @color-blue;
+
+  &:hover {
+    background-color: @color-dark-blue;
+  }
+
+  &:active {
+    background-color: @color-dark-blue;
+    opacity: 0.1;
+  }
+
+  &--current {
+    background-color: @color-dark-blue;
+  }
+}
