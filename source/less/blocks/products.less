@@ -11,7 +11,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr;
-    grid-template-rows: 311px;
+    grid-template-rows: repeat(auto-fit, min-max(311px, min-content));
     gap: 15px;
   }
 }
