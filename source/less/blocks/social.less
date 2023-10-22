@@ -1,23 +1,5 @@
 .social__list {
   .list();
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 30px);
-  gap: 5px;
-}
-
-.social--big .social__list {
-  grid-template-columns: repeat(auto-fit, 42px);
-}
-
-.social--transform .social__list {
-  @media (max-width: (@desktop-width - 1)) {
-    grid-template-columns: repeat(auto-fit, 42px);
-  }
-}
-
-.social--border .social__list {
-  gap: 16px;
 }
 
 .social__link {
