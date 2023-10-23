@@ -1,3 +1,25 @@
 .stars {
   .list();
+  display: flex;
+  justify-content: space-between;
+  width: 99px;
+}
+
+.stars__item {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.stars__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.stars__item--current ~ .stars__item .stars__icon {
+  color: @color-white;
 }

@@ -145,8 +145,8 @@
 
 
     <main class="page-main">
-      <section class="catalog-products">
-        <div class="catalog">
+      <section class="catalog">
+        <div class="catalog__item">
           <h2 class="catalog__title">Газовые котлы ведущих производителей</h2>
 
           <div class="catalog__brend brend slider">
@@ -206,7 +206,7 @@
                 </li>
                 <li class="slider__toggles-item">
                   <button class="slider__toggle" type="button">
-                    <span class="visually-hidden">3</span>
+                    <span class="visually-hidden">4</span>
                   </button>
                 </li>
               </ul>
@@ -216,25 +216,32 @@
           <div class="catalog__products products">
             <ul class="products__list">
               <li class="products__item">
-                <div class="products__card">
-                  <div class="products__img">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/thermex-desktop.webp 1x, img/products-1/thermex-desktop@2x.webp 2x">
-                      <source type="image/webp" srcset="img/products-1/thermex-mobile.webp 1x, img/products-1/thermex-mobile@2x.webp 2x">
-                      <source media="(min-width: 1300px)" srcset="img/products-1/thermex-desktop.png 1x, img/products-1/thermex-desktop@2x.jpg 2x">
-                      <img src="img/products-1/thermex-mobile.png" srcset="img/products-1/thermex-mobile@2x.png 2x" alt="Фото товара.">
-                    </picture>
-                  </div>
+                <div class="products__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/thermex-desktop.webp 1x, img/products-1/thermex-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products-1/thermex-mobile.webp 1x, img/products-1/thermex-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/products-1/thermex-desktop.png 1x, img/products-1/thermex-desktop@2x.jpg 2x">
+                    <img src="img/products-1/thermex-mobile.png" srcset="img/products-1/thermex-mobile@2x.png 2x" alt="Фото товара.">
+                  </picture>
+                </div>
 
-                  <div class="products__content">
-                    <h3 class="products__title">Газовые котлы thermex</h3>
+                <div class="products__description">
+                  <h3 class="products__title">Газовые котлы<br> thermex</h3>
 
-                    <p class="products__description">
-                      <span class="products__brend">Thermex GazPro</span>  -  инжиниринговый дивизион международной корпорации Thermex, специализирующийся на профессиональном инженерном оборудовании HVAC и охватывающий огромный спектр решений по отоплению, ГВС и автоматизации любого объекта недвижимости
-                    </p>
+                  <p class="products__content">
+                      Thermex GazPro - &nbsp;инжиниринговый дивизион
+                      международной корпорации Thermex,
+                    <span>
+                      специализирующийся на профессиональном
+                      инженерном оборудовании HVAC и охватывающий
+                      огромный спектр решений по отоплению, ГВС и
+                    </span>
+                    <span>
+                       автоматизации любого объекта недвижимости
+                    </span>
+                  </p>
 
-                    <span class="products__price">Цена под запрос</span>
-                  </div>
+                  <span class="products__price">Цена под запрос</span>
                 </div>
 
                 <div class="products__info">
@@ -242,6 +249,673 @@
                     <span class="products__rating-value">5.0</span>
 
                     <ul class="products__rating-stars stars">
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item stars__item--current">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
+
+                  <div class="products__info-buttons">
+                    <button class="products__button app-button app-button--staff" type="button">Консультация</button>
+                    <button class="products__button app-button app-button--current app-button--buy" type="button">Купить сейчас</button>
+                  </div>
+
+                  <h4 class="products__info-title">Написать нам в соц.сети</h4>
+
+                  <div class="products__social social social--dark">
+                    <ul class="products__social-list social__list">
+                      <li class="social__item">
+                        <a class="social__link social__link--vk">
+                          <svg class="social__icon social__icon--vk"" width="15" height="9" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg>
+                          <span class="visually-hidden">VK</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--whatsapp">
+                          <svg class="social__icon social__icon--whatsapp" width="18" height="18" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#whatsapp"></use>
+                          </svg>
+                          <span class="visually-hidden">Whatsapp</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--viber">
+                          <svg class="social__icon social__icon--viber" width="15" height="15" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#viber"></use>
+                          </svg>
+                          <span class="visually-hidden">Viber</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="products__item">
+                <div class="products__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/mizudo-desktop.webp 1x, img/products-1/mizudo-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products-1/mizudo-mobile.webp 1x, img/products-1/mizudo-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/products-1/mizudo-desktop.png 1x, img/products-1/mizudo-desktop@2x.jpg 2x">
+                    <img src="img/products-1/mizudo-mobile.png" srcset="img/products-1/mizudo-mobile@2x.png 2x" alt="Фото товара.">
+                  </picture>
+                </div>
+
+                <div class="products__description">
+                  <h3 class="products__title">Газовые котлы<br> mizudo</h3>
+
+                  <p class="products__content">
+                    Российская компания из Тульской области
+                    занимается производством климатической
+                    техники. Заводы компании располагаются в Китае.
+                    Основное направление в разработках — котлы
+                    отопления для бытовых и промышленных нужд.
+                  </p>
+
+                  <span class="products__price">Цена под запрос</span>
+                </div>
+
+                <div class="products__info">
+                  <div class="products__rating">
+                    <span class="products__rating-value">5.0</span>
+
+                    <ul class="products__rating-stars stars">
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon stars__icon--current" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
+
+                  <div class="products__info-buttons">
+                    <button class="products__button app-button app-button--staff" type="button">Консультация</button>
+                    <button class="products__button app-button app-button--buy" type="button">Купить сейчас</button>
+                  </div>
+
+                  <h4 class="products__info-title">Написать нам в соц.сети</h4>
+
+                  <div class="products__social social social--dark">
+                    <ul class="products__social-list social__list">
+                      <li class="social__item">
+                        <a class="social__link social__link--vk">
+                          <svg class="social__icon social__icon--vk"" width="15" height="9" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg>
+                          <span class="visually-hidden">VK</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--whatsapp">
+                          <svg class="social__icon social__icon--whatsapp" width="18" height="18" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#whatsapp"></use>
+                          </svg>
+                          <span class="visually-hidden">Whatsapp</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--viber">
+                          <svg class="social__icon social__icon--viber" width="15" height="15" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#viber"></use>
+                          </svg>
+                          <span class="visually-hidden">Viber</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="products__item">
+                <div class="products__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/navien-desktop.webp 1x, img/products-1/navien-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products-1/navien-mobile.webp 1x, img/products-1/navien-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/products-1/navien-desktop.png 1x, img/products-1/navien-desktop@2x.jpg 2x">
+                    <img src="img/products-1/navien-mobile.png" srcset="img/products-1/navien-mobile@2x.png 2x" alt="Фото товара.">
+                  </picture>
+                </div>
+
+                <div class="products__description">
+                  <h3 class="products__title">Газовые котлы<br> navien</h3>
+
+                  <p class="products__content">
+                    Navien&nbsp; - &nbsp;известный азиатский бренд, выпускающий
+                    отопительные системы (котлы и водонагреватели), а
+                    также другую бытовую технику. Основана в 1978
+                    году, страна производитель Navien – Южная Корея
+                  </p>
+
+                  <span class="products__price">Цена под запрос</span>
+                </div>
+
+                <div class="products__info">
+                  <div class="products__rating">
+                    <span class="products__rating-value">5.0</span>
+
+                    <ul class="products__rating-stars stars">
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon stars__icon--current" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
+
+                  <div class="products__info-buttons">
+                    <button class="products__button app-button app-button--staff" type="button">Консультация</button>
+                    <button class="products__button app-button app-button--buy" type="button">Купить сейчас</button>
+                  </div>
+
+                  <h4 class="products__info-title">Написать нам в соц.сети</h4>
+
+                  <div class="products__social social social--dark">
+                    <ul class="products__social-list social__list">
+                      <li class="social__item">
+                        <a class="social__link social__link--vk">
+                          <svg class="social__icon social__icon--vk"" width="15" height="9" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg>
+                          <span class="visually-hidden">VK</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--whatsapp">
+                          <svg class="social__icon social__icon--whatsapp" width="18" height="18" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#whatsapp"></use>
+                          </svg>
+                          <span class="visually-hidden">Whatsapp</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--viber">
+                          <svg class="social__icon social__icon--viber" width="15" height="15" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#viber"></use>
+                          </svg>
+                          <span class="visually-hidden">Viber</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="products__item">
+                <div class="products__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/baxi-desktop.webp 1x, img/products-1/baxi-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products-1/baxi-mobile.webp 1x, img/products-1/baxi-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/products-1/baxi-desktop.png 1x, img/products-1/baxi-desktop@2x.jpg 2x">
+                    <img src="img/products-1/baxi-mobile.png" srcset="img/products-1/baxi-mobile@2x.png 2x" alt="Фото товара.">
+                  </picture>
+                </div>
+
+                <div class="products__description">
+                  <h3 class="products__title">Газовые котлы<br> baxi</h3>
+
+                  <p class="products__content">
+                    Baxi&nbsp; - &nbsp;производитель систем отопления и ГВС,
+                    представительства компании расположены во
+                    многих странах Европы, а также в России.
+                    Владельцем данного бренда является
+                    корпорация BDR Thermea Group, основанная в
+                    2009 году в Нидерландах.
+                  </p>
+
+                  <span class="products__price">Цена под запрос</span>
+                </div>
+
+                <div class="products__info">
+                  <div class="products__rating">
+                    <span class="products__rating-value">5.0</span>
+
+                    <ul class="products__rating-stars stars">
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon stars__icon--current" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
+
+                  <div class="products__info-buttons">
+                    <button class="products__button app-button app-button--staff" type="button">Консультация</button>
+                    <button class="products__button app-button app-button--buy" type="button">Купить сейчас</button>
+                  </div>
+
+                  <h4 class="products__info-title">Написать нам в соц.сети</h4>
+
+                  <div class="products__social social social--dark">
+                    <ul class="products__social-list social__list">
+                      <li class="social__item">
+                        <a class="social__link social__link--vk">
+                          <svg class="social__icon social__icon--vk"" width="15" height="9" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg>
+                          <span class="visually-hidden">VK</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--whatsapp">
+                          <svg class="social__icon social__icon--whatsapp" width="18" height="18" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#whatsapp"></use>
+                          </svg>
+                          <span class="visually-hidden">Whatsapp</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--viber">
+                          <svg class="social__icon social__icon--viber" width="15" height="15" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#viber"></use>
+                          </svg>
+                          <span class="visually-hidden">Viber</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="catalog__item">
+          <h2 class="catalog__title">Бойлеры косвенного нагрева</h2>
+
+          <div class="catalog__brend brend slider">
+            <div class="catalog__brend-container">
+              <ul class="catalog__brend-list brend__list slider__list">
+                <li class="brend__item slider__item slider__item--current">
+                  <div class="brend__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/brends/thermex-logo.webp 1x, img/brends/thermex-logo@2x.webp 2x">
+                      <img src="img/brends/thermex-logo.png" srcset="img/brends/thermex-logo@2x.png 2x" alt="Логотип компании Thermex.">
+                    </picture>
+                  </div>
+                </li>
+                <li class="brend__item slider__item">
+                  <div class="brend__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/brends/hajdu-logo.webp 1x, img/brends/hajdu-logo@2x.webp 2x">
+                      <img src="img/brends/hajdu-logo.png" srcset="img/brends/hajdu-logo@2x.png 2x" alt="Логотип компании Hajdu.">
+                    </picture>
+                  </div>
+                </li>
+                <li class="brend__item slider__item">
+                  <div class="brend__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/brends/royal-logo.webp 1x, img/brends/royal-logo@2x.webp 2x">
+                      <img src="img/brends/royal-logo.png" srcset="img/brends/royal-logo@2x.png 2x" alt="Логотип компании Royal.">
+                    </picture>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="catalog__toggles-container">
+              <ul class="catalog__toggles slider__toggles">
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle slider__toggle--current" type="button">
+                    <span class="visually-hidden">1</span>
+                  </button>
+                </li>
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">2</span>
+                  </button>
+                </li>
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">3</span>
+                  </button>
+                </li>
+                <li class="slider__toggles-item">
+                  <button class="slider__toggle" type="button">
+                    <span class="visually-hidden">4</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="catalog__products products">
+            <ul class="products__list">
+              <li class="products__item">
+                <div class="products__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-2/thermex-desktop.webp 1x, img/products-2/thermex-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products-2/thermex-mobile.webp 1x, img/products-2/thermex-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/products-2/thermex-desktop.png 1x, img/products-2/thermex-desktop@2x.jpg 2x">
+                    <img src="img/products-2/thermex-mobile.png" srcset="img/products-2/thermex-mobile@2x.png 2x" alt="Фото товара.">
+                  </picture>
+                </div>
+
+                <div class="products__description">
+                  <h3 class="products__title">Бойлеры<br> thermex</h3>
+
+                  <p class="products__content">
+                    Thermex — производитель бытовых
+                    водонагревателей. Корпорация Thermex —
+                    международная торгово-промышленная группа
+                    компаний, крупнейший специализированный
+                    производитель водонагревателей в России и один
+                    из ведущих в мире
+                  </p>
+
+                  <span class="products__price">Цена под запрос</span>
+                </div>
+
+                <div class="products__info">
+                  <div class="products__rating">
+                    <span class="products__rating-value">5.0</span>
+
+                    <ul class="products__rating-stars stars">
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item stars__item--current">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
+
+                  <div class="products__info-buttons">
+                    <button class="products__button app-button app-button--staff" type="button">Консультация</button>
+                    <button class="products__button app-button app-button--current app-button--buy" type="button">Купить сейчас</button>
+                  </div>
+
+                  <h4 class="products__info-title">Написать нам в соц.сети</h4>
+
+                  <div class="products__social social social--dark">
+                    <ul class="products__social-list social__list">
+                      <li class="social__item">
+                        <a class="social__link social__link--vk">
+                          <svg class="social__icon social__icon--vk"" width="15" height="9" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg>
+                          <span class="visually-hidden">VK</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--whatsapp">
+                          <svg class="social__icon social__icon--whatsapp" width="18" height="18" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#whatsapp"></use>
+                          </svg>
+                          <span class="visually-hidden">Whatsapp</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--viber">
+                          <svg class="social__icon social__icon--viber" width="15" height="15" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#viber"></use>
+                          </svg>
+                          <span class="visually-hidden">Viber</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="products__item">
+                <div class="products__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-2/hajdu-desktop.webp 1x, img/products-2/hajdu-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products-2/hajdu-mobile.webp 1x, img/products-2/hajdu-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/products-2/hajdu-desktop.png 1x, img/products-2/hajdu-desktop@2x.jpg 2x">
+                    <img src="img/products-2/hajdu-mobile.png" srcset="img/products-2/hajdu-mobile@2x.png 2x" alt="Фото товара.">
+                  </picture>
+                </div>
+
+                <div class="products__description">
+                  <h3 class="products__title">Бойлеры<br> Hajdu</h3>
+
+                  <p class="products__content">
+                    Бренд Hajdu занимает лидирующие позиции на
+                    европейском рынке высокотехнологичного
+                    отопительного оборудования. Производственные
+                    мощности предприятия расположены в Венгрии.
+                  </p>
+
+                  <span class="products__price">Цена под запрос</span>
+                </div>
+
+                <div class="products__info">
+                  <div class="products__rating">
+                    <span class="products__rating-value">5.0</span>
+
+                    <ul class="products__rating-stars stars">
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon stars__icon--current" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
+
+                  <div class="products__info-buttons">
+                    <button class="products__button app-button app-button--staff" type="button">Консультация</button>
+                    <button class="products__button app-button app-button--buy" type="button">Купить сейчас</button>
+                  </div>
+
+                  <h4 class="products__info-title">Написать нам в соц.сети</h4>
+
+                  <div class="products__social social social--dark">
+                    <ul class="products__social-list social__list">
+                      <li class="social__item">
+                        <a class="social__link social__link--vk">
+                          <svg class="social__icon social__icon--vk"" width="15" height="9" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg>
+                          <span class="visually-hidden">VK</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--whatsapp">
+                          <svg class="social__icon social__icon--whatsapp" width="18" height="18" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#whatsapp"></use>
+                          </svg>
+                          <span class="visually-hidden">Whatsapp</span>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a class="social__link social__link--viber">
+                          <svg class="social__icon social__icon--viber" width="15" height="15" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#viber"></use>
+                          </svg>
+                          <span class="visually-hidden">Viber</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="products__item">
+                <div class="products__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-2/royal-desktop.webp 1x, img/products-2/royal-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products-2/royal-mobile.webp 1x, img/products-2/royal-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/products-2/royal-desktop.png 1x, img/products-2/royal-desktop@2x.jpg 2x">
+                    <img src="img/products-2/royal-mobile.png" srcset="img/products-2/royal-mobile@2x.png 2x" alt="Фото товара.">
+                  </picture>
+                </div>
+
+                <div class="products__description">
+                  <h3 class="products__title">Бойлеры<br> Royal Thermo</h3>
+
+                  <p class="products__content">
+                    Крупнейший производитель на рынке систем
+                    отопления и водоснабжения Евразии, с собственной
+                    штаб-квартирой, конструкторским бюро, дизайн-
+                    студией и заводами в России. В 2014 году во
+                    Владимирской области был запущен первый завод
+                    Royal Thermo
+                  </p>
+
+                  <span class="products__price">Цена под запрос</span>
+                </div>
+
+                <div class="products__info">
+                  <div class="products__rating">
+                    <span class="products__rating-value">5.0</span>
+
+                    <ul class="products__rating-stars stars">
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
+                      <li class="stars__item">
+                        <svg class="stars__icon" width="16" height="15" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </li>
                       <li class="stars__item">
                         <svg class="stars__icon stars__icon--current" width="16" height="15" aria-hidden="true" focusable="false">
                           <use xlink:href="img/sprite.svg#star"></use>
@@ -294,6 +968,96 @@
         </div>
       </section>
 
+      <section class="offer">
+        <div class="offer__wrapper">
+          <div class="offer__content">
+            <h2 class="offer__title">Консультация по&nbsp;оборудованию специально для вас</h2>
+
+            <button class="offer__button app-button app-button--staff" type="button">Консультация</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="equipment">
+          <h2 class="equipment__title">
+            Газовое оборудование для обвязки частных и жилых многоквартирных домов
+          </h2>
+
+          <div class="equipment__container">
+            <ul class="equipment__list slider__list">
+              <li class="equipment__item slider__item slider__item--current">
+                <div class="equipment__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/equipment/equipment-1.webp 1x, img/equipment/equipment-1@2x.webp 2x">
+                    <img src="img/equipment/equipment-1.png" srcset="img/equipment/equipment-1@2x.png 2x">
+                  </picture>
+                </div>
+                <h3 class="equipment__subtitle">ГРПШ<br> Газораспределительные шкафы</h3>
+              </li>
+              <li class="equipment__item slider__item">
+                <div class="equipment__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/equipment/equipment-2.webp 1x, img/equipment/equipment-2@2x.webp 2x">
+                    <img src="img/equipment/equipment-2.png" srcset="img/equipment/equipment-2@2x.png 2x">
+                  </picture>
+                </div>
+                <h3 class="equipment__subtitle">Приборы<br> учета газа</h3>
+              </li>
+              <li class="equipment__item slider__item">
+                <div class="equipment__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/equipment/equipment-3.webp 1x, img/equipment/equipment-3@2x.webp 2x">
+                    <img src="img/equipment/equipment-3.png" srcset="img/equipment/equipment-3@2x.png 2x">
+                  </picture>
+                </div>
+                <h3 class="equipment__subtitle">Краны шаровые<br> приварные и резьбовые</h3>
+              </li>
+              <li class="equipment__item slider__item">
+                <div class="equipment__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/equipment/equipment-4.webp 1x, img/equipment/equipment-4@2x.webp 2x">
+                    <img src="img/equipment/equipment-4.png" srcset="img/equipment/equipment-4@2x.png 2x">
+                  </picture>
+                </div>
+                <h3 class="equipment__subtitle">Подводка для газа</h3>
+              </li>
+              <li class="equipment__item slider__item">
+                <div class="equipment__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/equipment/equipment-5.webp 1x, img/equipment/equipment-5@2x.webp 2x">
+                    <img src="img/equipment/equipment-5.png" srcset="img/equipment/equipment-5@2x.png 2x">
+                  </picture>
+                </div>
+                <h3 class="equipment__subtitle">САКЗ<br> Система автономного<br> контроля загазованности</h3>
+              </li>
+            </ul>
+          </div>
+
+          <div class="equipment__toggles-container">
+            <ul class="equipment__toggles slider__toggles">
+              <li class="slider__toggles-item">
+                <button class="slider__toggle slider__toggle--current" type="button">
+                  <span class="visually-hidden">1</span>
+                </button>
+              </li>
+              <li class="slider__toggles-item">
+                <button class="slider__toggle" type="button">
+                  <span class="visually-hidden">2</span>
+                </button>
+              </li>
+              <li class="slider__toggles-item">
+                <button class="slider__toggle" type="button">
+                  <span class="visually-hidden">3</span>
+                </button>
+              </li>
+              <li class="slider__toggles-item">
+                <button class="slider__toggle" type="button">
+                  <span class="visually-hidden">4</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+      </section>
     </main>
 
     <footer class="page-footer">

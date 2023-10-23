@@ -1,0 +1,84 @@
+.offer {
+
+  @media (min-width: @desktop-width) {
+    padding: 0 113px;
+  }
+}
+
+.offer__wrapper {
+  // box-sizing: border-box;
+  min-height: 380px;
+
+  color: @color-white;
+  background-color: @color-grey;
+
+  background-image: image-set(
+    url("../../img/offer-mobile.webp"),
+    url("../../img/offer-mobile.png"),
+  );
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(
+      url("../../img/offer-mobile@2x.webp"),
+      url("../../img/offer-mobile@2x.png"),
+    );
+    background-size: 860px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    // width: 1097px;
+    min-height: 450px;
+
+    border-radius: 60px;
+    outline: 13px solid @color-white;
+    outline-offset: -12px;
+
+    background-image: image-set(
+      url("../../img/offer-desktop.webp"),
+      url("../../img/offer-desktop.png"),
+    );
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(
+        url("../../img/offer-desktop@2x.webp"),
+        url("../../img/offer-desktop@2x.png"),
+      );
+      background-size: 2194px auto;
+    }
+  }
+}
+
+.offer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  padding-top: 71px;
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    align-items: start;
+    padding-top: 95px;
+    padding-left: 88px;
+    margin: 0;
+  }
+
+}
+
+.offer__title {
+  margin: 0;
+  margin-bottom: 43px;
+
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
