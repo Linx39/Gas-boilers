@@ -1,4 +1,5 @@
 .page-header {
+  // position: relative;
   box-sizing: border-box;
   min-height: 804px;
 
@@ -7,6 +8,14 @@
   background-image: url("../../img/back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  &--promotion-opened {
+    margin-bottom: 559px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 348px;
+    }
+  }
 }
 
 .page-header__content {
@@ -97,6 +106,20 @@
       right: @desktop-padding;
       transform: translateY(-100%);
     }
+  }
+}
+
+.page-header__promotion {
+  display: none;
+}
+
+.page-header--promotion-opened .page-header__promotion {
+  display: block;
+  position: absolute;
+  top: 722px;
+
+  @media (min-width: @desktop-width) {
+    top: 739px;
   }
 }
 

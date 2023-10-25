@@ -138,6 +138,9 @@ img {
 .app-button--current {
   background-color: #0487D9;
 }
+.app-button--popover {
+  background-color: #52575A;
+}
 .app-button--call {
   background-image: url("../../img/buttons/call.svg");
   background-size: 20px 20px;
@@ -419,6 +422,9 @@ img {
   border-radius: 50%;
   background-color: #73C1F2;
 }
+.slider__toggles--light .slider__toggle {
+  background-color: #ffffff;
+}
 .slider__toggle:hover {
   background-color: #0487D9;
 }
@@ -437,6 +443,14 @@ img {
   background-image: url("../../img/back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.page-header--promotion-opened {
+  margin-bottom: 559px;
+}
+@media (min-width: 1300px) {
+  .page-header--promotion-opened {
+    margin-bottom: 348px;
+  }
 }
 .page-header__content {
   position: relative;
@@ -528,6 +542,19 @@ img {
     top: 0;
     right: 30px;
     transform: translateY(-100%);
+  }
+}
+.page-header__promotion {
+  display: none;
+}
+.page-header--promotion-opened .page-header__promotion {
+  display: block;
+  position: absolute;
+  top: 722px;
+}
+@media (min-width: 1300px) {
+  .page-header--promotion-opened .page-header__promotion {
+    top: 739px;
   }
 }
 .main-nav {
@@ -742,12 +769,118 @@ img {
   grid-template-columns: repeat(3, min-content);
   gap: 5px;
 }
-.catalog {
-  padding-top: 590px;
+.promotion {
+  width: 100%;
+  background-color: transparent;
+}
+.promotion__wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 412px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 53px;
+  padding-left: 67px;
+  padding-right: 67px;
+  color: #ffffff;
+  background-color: #73C1F2;
+  border-radius: 60px;
 }
 @media (min-width: 1300px) {
-  .catalog {
-    padding-top: 396px;
+  .promotion__wrapper {
+    width: 1074px;
+    padding-top: 39px;
+    padding-bottom: 22px;
+  }
+}
+.promotion__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 1300px) {
+  .promotion__title {
+    margin-bottom: 18px;
+  }
+}
+.promotion__button-container {
+  margin-bottom: 34px;
+}
+@media (min-width: 1300px) {
+  .promotion__button-container {
+    margin-bottom: 17px;
+  }
+}
+.promotion__slogan {
+  margin: 0;
+  margin-bottom: 34px;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 1300px) {
+  .promotion__slogan {
+    margin-bottom: 22px;
+  }
+}
+.promotion__date {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  gap: 8px;
+  margin-bottom: 27px;
+}
+@media (min-width: 1300px) {
+  .promotion__date {
+    margin-bottom: 45px;
+  }
+}
+.promotion__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promotion__item-value {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-bottom: 3px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 300;
+  text-align: center;
+}
+.promotion__item-text {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 300;
+}
+.promotion__toggles-container {
+  width: 132px;
+}
+.catalog__item {
+  padding-top: 31px;
+}
+.catalog__item:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+@media (min-width: 1300px) {
+  .catalog__item {
+    padding-top: 48px;
+  }
+  .catalog__item:not(:last-of-type) {
+    margin-bottom: 29px;
   }
 }
 .catalog__title {
@@ -805,16 +938,10 @@ img {
 }
 .catalog__products {
   padding: 0 75px;
-  margin-bottom: 39px;
 }
 @media (min-width: 1300px) {
   .catalog__products {
     padding: 0 30px;
-  }
-}
-@media (min-width: 1300px) {
-  .catalog__products {
-    margin-bottom: 79px;
   }
 }
 .brend__list {
@@ -1169,6 +1296,12 @@ img {
   grid-auto-flow: column;
   gap: 40px;
   justify-content: start;
+}
+@media (max-width: 1299px) {
+  .equipment__list {
+    position: relative;
+    overflow: hidden;
+  }
 }
 @media (min-width: 1300px) {
   .equipment__list {

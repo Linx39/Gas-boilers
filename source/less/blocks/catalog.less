@@ -1,8 +1,19 @@
 .catalog {
-  padding-top: 590px;
+}
+
+.catalog__item {
+  padding-top: 31px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
 
   @media (min-width: @desktop-width) {
-    padding-top: 396px;
+    padding-top: 48px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 29px;
+    }
   }
 }
 
@@ -55,17 +66,17 @@
 }
 
 .catalog__toggles {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {//перенести в контейнер
     display: none;
   }
 }
 
 .catalog__products {
   .wrapper();
-  margin-bottom: 39px;
+  // margin-bottom: 39px;
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 79px;
+    // margin-bottom: 79px;
   }
 }
 
