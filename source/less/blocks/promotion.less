@@ -19,11 +19,45 @@
   color: @color-white;
   background-color: @color-blue;
   border-radius: 60px;
+  box-shadow: 0 10px 8px 0 #00000024;
+
+
+  background-image: image-set(
+    url("../../img/promotion-mobile.webp"),
+    url("../../img/promotion-mobile.png"),
+  );
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 429px auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(
+      url("../../img/promotion-mobile@2x.webp"),
+      url("../../img/promotion-mobile@2x.png"),
+    );
+    background-size: 858px auto;
+  }
 
   @media (min-width: @desktop-width) {
-    width: 1074px;
-    padding-top: 39px;
+    width: 1072px;
+    padding-top: 38px;
     padding-bottom: 22px;
+    padding-left: 295px;
+    padding-right: 295px;
+
+    background-image: image-set(
+      url("../../img/promotion-desktop.webp"),
+      url("../../img/promotion-desktop.png"),
+    );
+    background-size: 1089px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(
+        url("../../img/promotion-desktop@2x.webp"),
+        url("../../img/promotion-desktop@2x.png"),
+      );
+      background-size: 2178px auto;
+    }
   }
 }
 
@@ -46,7 +80,7 @@
   margin-bottom: 34px;
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 17px;
+    margin-bottom: 19px;
   }
 }
 

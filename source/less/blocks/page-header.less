@@ -1,13 +1,42 @@
 .page-header {
-  // position: relative;
+  position: relative;
   box-sizing: border-box;
   min-height: 804px;
 
   color: @color-white;
   background-color: @color-grey;
-  background-image: url("../../img/back.jpg");
+
+  background-image: image-set(
+    url("../../img/back-mobile.webp"),
+    url("../../img/back-mobile.png"),
+  );
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(
+      url("../../img/back-mobile@2x.webp"),
+      url("../../img/back-mobile@2x.png"),
+    );
+    background-size: 860px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: image-set(
+      url("../../img/back-desktop.webp"),
+      url("../../img/back-desktop.png"),
+    );
+    background-size: 1728px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(
+        url("../../img/back-desktop@2x.webp"),
+        url("../../img/back-desktop@2x.png"),
+      );
+      background-size: 3456px auto;
+    }
+  }
 
   &--promotion-opened {
     margin-bottom: 559px;

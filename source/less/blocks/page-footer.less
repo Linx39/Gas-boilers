@@ -14,8 +14,8 @@
 
 .page-footer__content {
   padding: 0 @mobile-padding;
-  padding-top: 39px;
-  padding-bottom: 27px;
+  padding-top: 20px;
+  padding-bottom: 28px;
 
   @media (min-width: @desktop-width) {
     padding: 0;
@@ -99,7 +99,12 @@
 }
 
 .page-footer__map-button-container {
-  position: absolute;
-  right: 30px;
-  bottom: 26px;
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 26px;
+  }
 }
