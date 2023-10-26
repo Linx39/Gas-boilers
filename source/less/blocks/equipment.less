@@ -36,8 +36,9 @@
   @media (max-width: (@desktop-width - 1)) {
     box-sizing: border-box;
     width: calc(100vw - 21.25px);
-    // width: 100vw;
     padding-left: 72px;
+    overflow: hidden;
+    // width: 100vw;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,11 +53,6 @@
   grid-auto-flow: column;
   gap: 34px;
   justify-content: start;
-
-  @media (max-width: (@desktop-width - 1)) {
-    position: relative;
-    overflow: hidden;
-  }
 
   @media (min-width: @desktop-width) {
     display: flex;
