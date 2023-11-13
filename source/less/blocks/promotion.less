@@ -1,6 +1,19 @@
 .promotion {
-  width: 100%;
-  background-color: transparent;
+  display: none;
+
+  &--opened {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: -82px;
+    z-index: 10;
+
+    background-color: transparent;
+
+    @media (min-width: @desktop-width) {
+      margin-top: -65px;
+    }
+  }
 }
 
 .promotion__wrapper {

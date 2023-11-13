@@ -37,14 +37,6 @@
       background-size: 3456px auto;
     }
   }
-
-  &--promotion-opened {
-    margin-bottom: 559px;
-
-    @media (min-width: @desktop-width) {
-      margin-bottom: 348px;
-    }
-  }
 }
 
 .page-header__content {
@@ -53,6 +45,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 18px;
+  padding-bottom: 133px;
 
   @media (min-width: @desktop-width) {
     padding-top: 81px;
@@ -85,6 +78,8 @@
 .page-header__phone {
   order: -1;
   margin-bottom: 34px;
+  padding-left: @mobile-padding;
+  padding-right: @mobile-padding;
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -137,18 +132,3 @@
     }
   }
 }
-
-.page-header__promotion {
-  display: none;
-}
-
-.page-header--promotion-opened .page-header__promotion {
-  display: block;
-  position: absolute;
-  top: 722px;
-
-  @media (min-width: @desktop-width) {
-    top: 739px;
-  }
-}
-
