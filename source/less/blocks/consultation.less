@@ -1,0 +1,136 @@
+.consultation {
+  width: 413px;
+
+  min-height: 333px;
+
+  color: @color-white;
+  background-color: @color-blue;
+  border-radius: 50px;
+
+  @media (min-width: @desktop-width) {
+    width: 825px;
+  }
+}
+
+.consultation--content-opened .consultation__content {
+  display: block;
+}
+
+.consultation--content-opened .consultation__answer {
+  display: none;
+}
+
+.consultation--answer-opened .consultation__content {
+  display: none;
+}
+
+.consultation--answer-opened .consultation__answer {
+  display: block;
+}
+
+.consultation__content {
+  padding-top: 58px;
+  padding-bottom: 26px;
+  padding-left: 34px;
+  padding-right: 43px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 18px;
+    padding-bottom: 26px;
+    padding-left: 34px;
+    padding-right: 43px;
+  }
+}
+
+.consultation__answer {
+  padding-top: 48px;
+  padding-bottom: 70px;
+  padding-left: 34px;
+  padding-right: 34px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 39px;
+    padding-bottom: 70px;
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+}
+
+.consultation__tittle {
+  margin: 0 auto;
+
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--content {
+    margin-bottom: 33px;
+
+    @media (min-width: @desktop-width) {
+      width: 453px;
+    }
+  }
+
+  &--answer {
+    margin-bottom: 34px;
+  }
+}
+
+.consultation__fields-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.consultation__label {
+  margin-bottom: 14px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.consultation__field {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.consultation__field::placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.consultation__button {
+  margin: 0 auto;
+}
+
+.consultation__description {
+  margin: 0 auto;
+  padding-top: 51px;
+
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-image: url("../../img/buttons/staff.svg");
+  background-size: 35px 35px;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @desktop-width) {
+    width: 444px;
+  }
+}
