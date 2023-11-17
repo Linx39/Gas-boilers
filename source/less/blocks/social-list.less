@@ -1,0 +1,112 @@
+.social-list {
+  .list();
+}
+
+.social-list__link {
+  position: relative;
+  .button();
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 2px;
+  color: @color-light-black;
+  background-color: @color-white;
+}
+
+.social-list--border .social-list__link {
+  border-radius: 5px;
+  border: 1px solid @color-grey;
+}
+
+.social-list--color .social-list__link {
+  color: @color-white;
+  background-color: @color-blue;
+}
+
+.social-list__icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+}
+
+.social-list--big .social-list__link {
+  width: 42px;
+  height: 42px;
+}
+
+.social-list--big .social-list__icon {
+  &--vk {
+    width: 21px;
+    height: 13px;
+  }
+
+  &--whatsapp {
+    width: 25px;
+    height: 25px;
+  }
+
+  &--viber {
+    width: 23px;
+    height: 22px;
+  }
+}
+
+.social-list--variable .social-list__link {
+  @media (max-width: (@desktop-width - 1)) {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.social-list--variable .social-list__icon {
+  @media (max-width: (@desktop-width - 1)) {
+    &--vk {
+      width: 21px;
+      height: 13px;
+    }
+
+    &--whatsapp {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--viber {
+      width: 23px;
+      height: 22px;
+    }
+  }
+}
+
+.social-list__link--vk {
+  &:hover {
+    background-color: @color-vk;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social-list__link--whatsapp {
+  &:hover {
+    background-color: @color-whatsapp;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social-list__link--viber {
+  &:hover {
+    background-color: @color-viber;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

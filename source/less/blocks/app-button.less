@@ -8,20 +8,12 @@
     background-color: @color-dark-blue;
   }
 
-  &--promotion {
-    padding-top: 14px;
-    padding-bottom: 15px;
-
-    background-color: @color-light-grey;
-    border: 2px solid @color-white;
-  }
-
-  &--form {
-    background-color: @color-light-grey;
-  }
-
   &:hover {
     background-color: @color-dark-blue;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-grey;
   }
 
   &:active {
@@ -29,3 +21,21 @@
     opacity: 0.3;
   }
 }
+
+.app-button--form {
+  background-color: @color-light-grey;
+
+  &:hover {
+    background-color: @color-dark-grey;
+  }
+  
+  &:focus-visible {
+    outline: 2px solid @color-grey;
+  }
+
+  &:active {
+    background-color: @color-dark-grey;
+    opacity: 0.3;
+  }
+}
+

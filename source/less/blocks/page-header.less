@@ -75,20 +75,14 @@
   }
 }
 
-.page-header__phone {
-  order: -1;
-  margin-bottom: 34px;
-  padding-left: @mobile-padding;
-  padding-right: @mobile-padding;
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
 .page-header__phone-list {
   .list();
 
+  order: -1;
+
+  margin-bottom: 34px;
+  padding-left: @mobile-padding;
+  padding-right: @mobile-padding;
   padding-top: 40px;
 
   background-image: url("../../img/phone.svg");
@@ -99,10 +93,10 @@
   font-size: 30px;
   line-height: 41px;
   font-weight: 800;
-}
 
-.page-header__phone-link {
-  .button();
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .page-header__buttons-container {

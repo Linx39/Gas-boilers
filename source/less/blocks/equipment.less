@@ -37,8 +37,8 @@
     box-sizing: border-box;
     width: calc(100vw - 21.25px);
     padding-left: 72px;
+    margin-bottom: 36px;
     overflow: hidden;
-    // width: 100vw;
   }
 
   @media (min-width: @desktop-width) {
@@ -92,6 +92,8 @@
   text-align: center;
 }
 
-.equipment__toggles-container {
-  display: none;
+.equipment__toggles {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

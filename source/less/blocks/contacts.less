@@ -1,5 +1,4 @@
 .contacts__title {
-  align-items: center;
   margin: 0;
 
   font-size: 32px;
@@ -20,14 +19,6 @@
   font-weight: 500;
 }
 
-.contacts--desktop-nav .contacts__list {
-  @media (min-width: @desktop-width) {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: 500;
-  }
-}
-
 .contacts__item {
   position: relative;
   padding-left: 30px;
@@ -41,10 +32,18 @@
   }
 }
 
+.contacts--desktop-nav .contacts__list {
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+}
+
 .contacts--desktop-nav .contacts__item {
   @media (min-width: @desktop-width) {
     padding: 10px 0;
-    
+
     &--adress {
       max-width: 193px;
       padding-left: 26px;
@@ -78,10 +77,6 @@
 
 .contacts__phone-list {
   .list();
-}
-
-.contacts__phone-link {
-  .button();
 }
 
 .contacts__link {
