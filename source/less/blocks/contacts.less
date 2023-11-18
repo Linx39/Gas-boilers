@@ -17,6 +17,20 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+
+  &--row {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+    }
+  }
 }
 
 .contacts__item {
@@ -32,15 +46,7 @@
   }
 }
 
-.contacts--desktop-nav .contacts__list {
-  @media (min-width: @desktop-width) {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: 500;
-  }
-}
-
-.contacts--desktop-nav .contacts__item {
+.contacts__list--row .contacts__item {
   @media (min-width: @desktop-width) {
     padding: 10px 0;
 

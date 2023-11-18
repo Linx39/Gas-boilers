@@ -22,19 +22,19 @@
               <span class="visually-hidden">Открыть/закрыть меню</span>
             </button>
 
-            <div class="main-nav__contacts contacts contacts--desktop-nav">
+            <div class="main-nav__contacts contacts">
               <div class="main-nav__logo">
                 <a class="logo" href="#">Газовые котлы и&nbsp;оборудование</a>
               </div>
 
               <h3 class="main-nav__contacts-title contacts__title">Контакты</h3>
 
-              <ul class="main-nav__contacts-list contacts__list">
+              <ul class="main-nav__contacts-list contacts__list contacts__list--row">
                 <li class="contacts__item contacts__item--adress">
                   <svg class="contacts__icon" width="13" height="15" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#place"></use>
                   </svg>
-                  <a class="contacts__link" href="#">г.Череповец ,<br> ул.Любецкая д.38 магазин «Сантехника&nbsp;плюс»</a>
+                  <a class="contacts__link" href="#map">г.Череповец ,<br> ул.Любецкая д.38 магазин «Сантехника&nbsp;плюс»</a>
                 </li>
                 <li class="contacts__item contacts__item--schedule">
                   <svg class="contacts__icon" width="15" height="15" aria-hidden="true" focusable="false">
@@ -66,7 +66,7 @@
             </div>
 
             <div class="main-nav__social">
-              <ul class="main-nav__social-list social-list social-list--variable">
+              <ul class="main-nav__social-list social-list social-list--changed-size">
                 <li class="social-list__item">
                   <a class="social-list__link social-list__link--vk" href="#">
                     <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -98,22 +98,22 @@
           <div class="main-nav__bottom-bar">
             <ul class="main-nav__site-list site-list">
               <li class="site-list__item">
-                <a class="site-list__link" href="#">Газовые котлы</a>
+                <a class="site-list__link" href="#catalog-item-1">Газовые котлы</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="#">Бойлер косвенного нагрева</a>
+                <a class="site-list__link" href="#catalog-item-2">Бойлер косвенного нагрева</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="#">Дополнительное оборудование</a>
+                <a class="site-list__link" href="#equipment">Дополнительное оборудование</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="#">Схема работы</a>
+                <a class="site-list__link" href="#map">Схема работы</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="#">Производители</a>
+                <a class="site-list__link" href="#brend">Производители</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="#">Контакты</a>
+                <a class="site-list__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -131,7 +131,7 @@
 
         <div class="page-header__buttons-container">
           <button class="page-header__button page-header__button--call app-button app-button--call app-interactive app-interactive--call" type="button">Заказать звонок</button>
-          <a class="page-header__button page-header__button--catalog app-button app-button--catalog app-interactive app-interactive--catalog" href="#">Каталог продукции</a>
+          <a class="page-header__button page-header__button--catalog app-button app-button--catalog app-interactive app-interactive--catalog" href="#catalog-item-1">Каталог продукции</a>
           <button class="page-header__button page-header__button--staff app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
         </div>
       </div>
@@ -139,97 +139,99 @@
 
     <main class="page-main">
       <section class="promotion promotion--opened">
-        <div class="promotion__wrapper">
-          <h2 class="promotion__title">Газовые котлы THERMEX в&nbsp;августе со скидкой 10% </h2>
+        <div class="promotion__wrapper slider">
+          <ul class="promotion__list slider__list">
+            <li class="promotion__list-item slider__item slider__item--current">
+              <h2 class="promotion__title">Газовые котлы THERMEX в&nbsp;августе со скидкой 10% </h2>
 
-          <button class="promotion__button app-button app-button--call app-button--form app-interactive app-interactive--call app-interactive--border" type="button">Заказать звонок</button>
+              <button class="promotion__button app-button app-button--call app-button--form app-interactive app-interactive--call app-interactive--border" type="button">Заказать звонок</button>
 
-          <p class="promotion__slogan"><time datetime="2024-01-25 09:00:00"></time>До конца акции осталось</p>
+              <p class="promotion__slogan"><time datetime="2024-01-25 09:00:00"></time>До конца акции осталось</p>
 
-          <div class="promotion__date">
-            <span class="promotion__item promotion__item-day">
-              <span class="promotion__item-value">12</span>
-              <span class="promotion__item-text">Дней</span>
-            </span>
-            <span class="promotion__item promotion__item-day">
-              <span class="promotion__item-value">05</span>
-              <span class="promotion__item-text">Часов</span>
-            </span>
-            <span class="promotion__item promotion__item-day">
-              <span class="promotion__item-value">11</span>
-              <span class="promotion__item-text">Минут</span>
-            </span>
-            <span class="promotion__item promotion__item-day">
-              <span class="promotion__item-value">54</span>
-              <span class="promotion__item-text">Секунд</span>
-            </span>
-          </div>
+              <div class="promotion__date">
+                <span class="promotion__item promotion__item-day">
+                  <span class="promotion__item-value">12</span>
+                  <span class="promotion__item-text">Дней</span>
+                </span>
+                <span class="promotion__item promotion__item-day">
+                  <span class="promotion__item-value">05</span>
+                  <span class="promotion__item-text">Часов</span>
+                </span>
+                <span class="promotion__item promotion__item-day">
+                  <span class="promotion__item-value">11</span>
+                  <span class="promotion__item-text">Минут</span>
+                </span>
+                <span class="promotion__item promotion__item-day">
+                  <span class="promotion__item-value">54</span>
+                  <span class="promotion__item-text">Секунд</span>
+                </span>
+              </div>
+            </li>
+          </ul>
 
-          <div class="promotion__toggles-container slider">
-            <ul class="promotion__toggles slider__toggles slider__toggles--light">
-              <li class="slider__toggles-item">
-                <button class="slider__toggle slider__toggle--current" type="button">
-                  <span class="visually-hidden">1</span>
-                </button>
-              </li>
-              <li class="slider__toggles-item">
-                <button class="slider__toggle" type="button">
-                  <span class="visually-hidden">2</span>
-                </button>
-              </li>
-              <li class="slider__toggles-item">
-                <button class="slider__toggle" type="button">
-                  <span class="visually-hidden">3</span>
-                </button>
-              </li>
-              <li class="slider__toggles-item">
-                <button class="slider__toggle" type="button">
-                  <span class="visually-hidden">4</span>
-                </button>
-              </li>
-            </ul>
-          </div>
+          <ul class="promotion__toggles slider__toggles slider__toggles--light-theme">
+            <li class="slider__toggles-item">
+              <button class="slider__toggle slider__toggle--current" type="button">
+                <span class="visually-hidden">1</span>
+              </button>
+            </li>
+            <li class="slider__toggles-item">
+              <button class="slider__toggle" type="button">
+                <span class="visually-hidden">2</span>
+              </button>
+            </li>
+            <li class="slider__toggles-item">
+              <button class="slider__toggle" type="button">
+                <span class="visually-hidden">3</span>
+              </button>
+            </li>
+            <li class="slider__toggles-item">
+              <button class="slider__toggle" type="button">
+                <span class="visually-hidden">4</span>
+              </button>
+            </li>
+          </ul>
         </div>
       </section>
 
       <section class="catalog">
-        <div class="catalog__item">
+        <div class="catalog__item" id="catalog-item-1">
           <h2 class="catalog__title">Газовые котлы ведущих производителей</h2>
 
-          <div class="catalog__brend brend slider">
+          <div class="catalog__brend brend slider" id="brend">
             <div class="catalog__brend-wrapper">
               <ul class="catalog__brend-list brend-list slider__list">
                 <li class="brend-list__item brend-list__item--current slider__item slider__item--current">
-                  <div class="brend-list__img">
+                  <a class="brend-list__link" href="#thermex-1">
                     <picture>
                       <source type="image/webp" srcset="img/brends/thermex-logo.webp 1x, img/brends/thermex-logo@2x.webp 2x">
                       <img src="img/brends/thermex-logo.png" srcset="img/brends/thermex-logo@2x.png 2x" alt="Логотип компании Thermex">
                     </picture>
-                  </div>
+                  </a>
                 </li>
                 <li class="brend-list__item slider__item">
-                  <div class="brend-list__img">
+                  <a class="brend-list__link" href="#mizudo-1">
                     <picture>
                       <source type="image/webp" srcset="img/brends/mizudo-logo.webp 1x, img/brends/mizudo-logo@2x.webp 2x">
                       <img src="img/brends/mizudo-logo.png" srcset="img/brends/mizudo-logo@2x.png 2x" alt="Логотип компании Mizudo">
                     </picture>
-                  </div>
+                  </a>
                 </li>
                 <li class="brend-list__item slider__item">
-                  <div class="brend-list__img">
+                  <a class="brend-list__link" href="#navien-1">
                     <picture>
-                      <source type="image/webp" srcset="img/brends/navein-logo.webp 1x, img/brends/navein-logo@2x.webp 2x">
-                      <img src="img/brends/navein-logo.png" srcset="img/brends/navein-logo@2x.png 2x" alt="Логотип компании Navein">
+                      <source type="image/webp" srcset="img/brends/navien-logo.webp 1x, img/brends/navien-logo@2x.webp 2x">
+                      <img src="img/brends/navien-logo.png" srcset="img/brends/navien-logo@2x.png 2x" alt="Логотип компании Navien">
                     </picture>
-                  </div>
+                  </a>
                 </li>
                 <li class="brend-list__item slider__item">
-                  <div class="brend-list__img">
+                  <a class="brend-list__link" href="#baxi-1">
                     <picture>
                       <source type="image/webp" srcset="img/brends/baxi-logo.webp 1x, img/brends/baxi-logo@2x.webp 2x">
                       <img src="img/brends/baxi-logo.png" srcset="img/brends/baxi-logo@2x.png 2x" alt="Логотип компании Baxi">
                     </picture>
-                  </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -260,7 +262,7 @@
 
           <div class="catalog__products products">
             <ul class="products__list">
-              <li class="products__item">
+              <li class="products__item" id="thermex-1">
                 <div class="products__img">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/thermex-desktop.webp 1x, img/products-1/thermex-desktop@2x.webp 2x">
@@ -270,10 +272,10 @@
                   </picture>
                 </div>
 
-                <div class="products__description">
+                <div class="products__content">
                   <h3 class="products__title">Газовые котлы<br> thermex</h3>
 
-                  <p class="products__content">
+                  <p class="products__description">
                       Thermex GazPro - &nbsp;инжиниринговый дивизион
                       международной корпорации Thermex,
                     <span>
@@ -331,7 +333,7 @@
 
                   <h4 class="products__info-title">Написать нам в соц.сети</h4>
 
-                  <ul class="products__social-list social-list social-list--color">
+                  <ul class="products__social-list social-list social-list--color-theme">
                     <li class="social-list__item">
                       <a class="social-list__link social-list__link--vk" href="#">
                         <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -360,7 +362,7 @@
                 </div>
               </li>
 
-              <li class="products__item">
+              <li class="products__item" id="mizudo-1">
                 <div class="products__img">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/mizudo-desktop.webp 1x, img/products-1/mizudo-desktop@2x.webp 2x">
@@ -370,10 +372,10 @@
                   </picture>
                 </div>
 
-                <div class="products__description">
+                <div class="products__content">
                   <h3 class="products__title">Газовые котлы<br> mizudo</h3>
 
-                  <p class="products__content">
+                  <p class="products__description">
                     Российская компания из Тульской области
                     занимается производством климатической
                     техники. Заводы компании располагаются в Китае.
@@ -426,7 +428,7 @@
 
                   <h4 class="products__info-title">Написать нам в соц.сети</h4>
 
-                  <ul class="products__social-list social-list social-list--color">
+                  <ul class="products__social-list social-list social-list--color-theme">
                     <li class="social-list__item">
                       <a class="social-list__link social-list__link--vk" href="#">
                         <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -455,7 +457,7 @@
                 </div>
               </li>
 
-              <li class="products__item">
+              <li class="products__item" id="navien-1">
                 <div class="products__img">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/navien-desktop.webp 1x, img/products-1/navien-desktop@2x.webp 2x">
@@ -465,10 +467,10 @@
                   </picture>
                 </div>
 
-                <div class="products__description">
+                <div class="products__content">
                   <h3 class="products__title">Газовые котлы<br> navien</h3>
 
-                  <p class="products__content">
+                  <p class="products__description">
                     Navien&nbsp; - &nbsp;известный азиатский бренд, выпускающий
                     отопительные системы (котлы и водонагреватели), а
                     также другую бытовую технику. Основана в 1978
@@ -520,7 +522,7 @@
 
                   <h4 class="products__info-title">Написать нам в соц.сети</h4>
 
-                  <ul class="products__social-list social-list social-list--color">
+                  <ul class="products__social-list social-list social-list--color-theme">
                     <li class="social-list__item">
                       <a class="social-list__link social-list__link--vk" href="#">
                         <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -549,7 +551,7 @@
                 </div>
               </li>
 
-              <li class="products__item">
+              <li class="products__item" id="baxi-1">
                 <div class="products__img">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-1/baxi-desktop.webp 1x, img/products-1/baxi-desktop@2x.webp 2x">
@@ -559,10 +561,10 @@
                   </picture>
                 </div>
 
-                <div class="products__description">
+                <div class="products__content">
                   <h3 class="products__title">Газовые котлы<br> baxi</h3>
 
-                  <p class="products__content">
+                  <p class="products__description">
                     Baxi&nbsp; - &nbsp;производитель систем отопления и ГВС,
                     представительства компании расположены во
                     многих странах Европы, а также в России.
@@ -616,7 +618,7 @@
 
                   <h4 class="products__info-title">Написать нам в соц.сети</h4>
 
-                  <ul class="products__social-list social-list social-list--color">
+                  <ul class="products__social-list social-list social-list--color-theme">
                     <li class="social-list__item">
                       <a class="social-list__link social-list__link--vk" href="#">
                         <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -648,35 +650,35 @@
           </div>
         </div>
 
-        <div class="catalog__item">
+        <div class="catalog__item" id="catalog-item-2">
           <h2 class="catalog__title">Бойлеры косвенного нагрева</h2>
 
           <div class="catalog__brend brend slider">
             <div class="catalog__brend-wrapper">
               <ul class="catalog__brend-list brend-list slider__list">
                 <li class="brend-list__item slider__item slider__item--current">
-                  <div class="brend-list__img">
+                  <a class="brend-list__link" href="#thermex-2">
                     <picture>
                       <source type="image/webp" srcset="img/brends/thermex-logo.webp 1x, img/brends/thermex-logo@2x.webp 2x">
                       <img src="img/brends/thermex-logo.png" srcset="img/brends/thermex-logo@2x.png 2x" alt="Логотип компании Thermex.">
                     </picture>
-                  </div>
+                  </a>
                 </li>
                 <li class="brend-list__item slider__item">
-                  <div class="brend-list__img">
+                  <a class="brend-list__link" href="#hajdu-2">
                     <picture>
                       <source type="image/webp" srcset="img/brends/hajdu-logo.webp 1x, img/brends/hajdu-logo@2x.webp 2x">
                       <img src="img/brends/hajdu-logo.png" srcset="img/brends/hajdu-logo@2x.png 2x" alt="Логотип компании Hajdu.">
                     </picture>
-                  </div>
+                  </a>
                 </li>
                 <li class="brend-list__item slider__item">
-                  <div class="brend-list__img">
+                  <a class="brend-list__link" href="#royal-2">
                     <picture>
                       <source type="image/webp" srcset="img/brends/royal-logo.webp 1x, img/brends/royal-logo@2x.webp 2x">
                       <img src="img/brends/royal-logo.png" srcset="img/brends/royal-logo@2x.png 2x" alt="Логотип компании Royal.">
                     </picture>
-                  </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -707,7 +709,7 @@
 
           <div class="catalog__products products">
             <ul class="products__list">
-              <li class="products__item">
+              <li class="products__item" id="thermex-2">
                 <div class="products__img">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-2/thermex-desktop.webp 1x, img/products-2/thermex-desktop@2x.webp 2x">
@@ -717,10 +719,10 @@
                   </picture>
                 </div>
 
-                <div class="products__description">
+                <div class="products__content">
                   <h3 class="products__title">Бойлеры<br> thermex</h3>
 
-                  <p class="products__content">
+                  <p class="products__description">
                     Thermex — производитель бытовых
                     водонагревателей. Корпорация Thermex —
                     международная торгово-промышленная группа
@@ -774,7 +776,7 @@
 
                   <h4 class="products__info-title">Написать нам в соц.сети</h4>
 
-                  <ul class="products__social-list social-list social-list--color">
+                  <ul class="products__social-list social-list social-list--color-theme">
                     <li class="social-list__item">
                       <a class="social-list__link social-list__link--vk" href="#">
                         <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -803,7 +805,7 @@
                 </div>
               </li>
 
-              <li class="products__item">
+              <li class="products__item" id="royal-2">
                 <div class="products__img">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-2/hajdu-desktop.webp 1x, img/products-2/hajdu-desktop@2x.webp 2x">
@@ -813,10 +815,10 @@
                   </picture>
                 </div>
 
-                <div class="products__description">
+                <div class="products__content">
                   <h3 class="products__title">Бойлеры<br> Hajdu</h3>
 
-                  <p class="products__content">
+                  <p class="products__description">
                     Бренд Hajdu занимает лидирующие позиции на
                     европейском рынке высокотехнологичного
                     отопительного оборудования. Производственные
@@ -868,7 +870,7 @@
 
                   <h4 class="products__info-title">Написать нам в соц.сети</h4>
 
-                  <ul class="products__social-list social-list social-list--color">
+                  <ul class="products__social-list social-list social-list--color-theme">
                     <li class="social-list__item">
                       <a class="social-list__link social-list__link--vk" href="#">
                         <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -897,7 +899,7 @@
                 </div>
               </li>
 
-              <li class="products__item">
+              <li class="products__item" id="royal-2">
                 <div class="products__img">
                   <picture>
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/products-2/royal-desktop.webp 1x, img/products-2/royal-desktop@2x.webp 2x">
@@ -907,10 +909,10 @@
                   </picture>
                 </div>
 
-                <div class="products__description">
+                <div class="products__content">
                   <h3 class="products__title">Бойлеры<br> Royal Thermo</h3>
 
-                  <p class="products__content">
+                  <p class="products__description">
                     Крупнейший производитель на рынке систем
                     отопления и водоснабжения Евразии, с собственной
                     штаб-квартирой, конструкторским бюро, дизайн-
@@ -964,7 +966,7 @@
 
                   <h4 class="products__info-title">Написать нам в соц.сети</h4>
 
-                  <ul class="products__social-list social-list social-list--color">
+                  <ul class="products__social-list social-list social-list--color-theme">
                     <li class="social-list__item">
                       <a class="social-list__link social-list__link--vk" href="#">
                         <svg class="social-list__icon social-list__icon--vk" width="15" height="9" aria-hidden="true" focusable="false">
@@ -1007,7 +1009,7 @@
         </div>
       </section>
 
-      <section class="equipment slider">
+      <section class="equipment slider" id="equipment">
           <h2 class="equipment__title">
             Газовое оборудование для обвязки частных и жилых многоквартирных домов
           </h2>
@@ -1090,7 +1092,7 @@
     <footer class="page-footer">
       <div class="page-footer__content">
         <div class="page-footer__content-wrapper">
-          <div class="page-footer__contacts contacts">
+          <div class="page-footer__contacts contacts" id="contacts">
             <div class="page-footer__logo">
               <a class="logo logo--footer" href="#">Газовые котлы и&nbsp;оборудование</a>
             </div>
@@ -1102,7 +1104,7 @@
                 <svg class="contacts__icon" width="13" height="15" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#place"></use>
                 </svg>
-                <a class="contacts__link" href="#">г.Череповец ,<br> ул.Любецкая д.38 магазин «Сантехника&nbsp;плюс»</a>
+                <a class="contacts__link" href="#map">г.Череповец ,<br> ул.Любецкая д.38 магазин «Сантехника&nbsp;плюс»</a>
               </li>
               <li class="page-footer__contacts-item contacts__item contacts__item--schedule">
                 <svg class="contacts__icon" width="15" height="15" aria-hidden="true" focusable="false">
@@ -1166,7 +1168,7 @@
         </div>
       </div>
 
-      <div class="page-footer__map">
+      <div class="page-footer__map" id="map">
         <picture>
           <source type="image/webp" media="(min-width: 1300px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
           <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
