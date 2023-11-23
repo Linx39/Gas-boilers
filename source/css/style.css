@@ -1177,6 +1177,9 @@ img {
     margin-bottom: 36px;
     overflow: hidden;
   }
+  .catalog__brend-wrapper--transform {
+    padding-right: 16px;
+  }
 }
 .catalog__toggles {
   max-width: 228px;

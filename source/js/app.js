@@ -56,16 +56,60 @@ callButtons.forEach((button) => {
   });
 })
 
-const catalogItem1 = document.querySelector('#catalog-item-1');
-const catalogBrendList = catalogItem1.querySelector('.catalog__brend-list');
-const sliderToggleArray = catalogItem1.querySelectorAll('.slider__toggle');
 
-const transformSlide = (evt) => {
-  const sliderToggleCurrent = catalogItem1.querySelector('.slider__toggle--current');
-  const indexCurrent = Array.from(sliderToggleArray).findIndex((item) => item === sliderToggleCurrent);
-console.log (indexCurrent);
+//Функция переключателя слайдера
+
+const catalogItem1Element = document.querySelector(`#catalog-item-1`);
+const sliderWrapper = catalogItem1Element.querySelector(`.catalog__brend-wrapper`);
+const sliderWrapperClass = `catalog__brend-wrapper--transform`;
+
+// const sliderWindow = document.querySelector(`.slider__wrapper`);
+const sliderTogglesElement = catalogItem1Element.querySelector('.slider__toggles');
+const sliderListElement = catalogItem1Element.querySelector('.slider__list');
+
+const sliderToggleArray = sliderTogglesElement.querySelectorAll('.slider__toggle');
+const sliderItemArray = sliderListElement.querySelectorAll('.slider__item');
+
+const sliderToggleCurrentClass = `slider__toggle--current`;
+const brendItemCurrentClass = `brend-list__item--current`;
+const sliderItemCurrentClass = `slider__item--current`;
+
+const itemWidth = sliderItemArray[0].clientWidth;
+const listScrollWidth = sliderListElement.scrollWidth;
+const listClientWidth = sliderListElement.clientWidth;
+const hiddenWidth = listScrollWidth - listClientWidth;
+
+const itemGup = (listScrollWidth - sliderItemArray.length * itemWidth) / (sliderItemArray.length - 1);
+const itemTranslate = itemWidth + itemGup;
+
+const transformSlider = (evt) => {
+  const sliderToggleCurrent = sliderTogglesElement.querySelector(`.${sliderToggleCurrentClass}`);
+  const sliderItemCurrent = sliderListElement.querySelector(`.${sliderItemCurrentClass}`);
+
+  const indexCurrent = [...sliderToggleArray].findIndex((item) => item === sliderToggleCurrent);
+  const indexClick = [...sliderToggleArray].findIndex((item) => item === evt.target);
+
+  const listTranslate = indexClick * itemTranslate;
+
+  if (indexCurrent !== indexClick) {
+    if(listTranslate < hiddenWidth) {
+      sliderListElement.style.transform = `translateX(${-listTranslate}px)`;
+    } else {
+      sliderWrapper.classList.add(sliderWrapperClass);
+
+      sliderListElement.style.transform = `translateX(${-hiddenWidth - 16}px)`;
+    }
+
+    sliderToggleCurrent.classList.remove(sliderToggleCurrentClass);
+    evt.target.classList.add(sliderToggleCurrentClass);
+
+    sliderItemCurrent.classList.remove(brendItemCurrentClass);
+    sliderItemCurrent.classList.remove(sliderItemCurrentClass);
+    sliderItemArray[indexClick].classList.add(sliderItemCurrentClass);
+    sliderItemArray[indexClick].classList.add(brendItemCurrentClass);
+  }
 }
 
 sliderToggleArray.forEach((toggle) => {
-  toggle.addEventListener('click', transformSlide);
+  toggle.addEventListener('click', transformSlider);
 })
