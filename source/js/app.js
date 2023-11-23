@@ -55,3 +55,17 @@ callButtons.forEach((button) => {
     modal.classList.add('modal--opened');
   });
 })
+
+const catalogItem1 = document.querySelector('#catalog-item-1');
+const catalogBrendList = catalogItem1.querySelector('.catalog__brend-list');
+const sliderToggleArray = catalogItem1.querySelectorAll('.slider__toggle');
+
+const transformSlide = (evt) => {
+  const sliderToggleCurrent = catalogItem1.querySelector('.slider__toggle--current');
+  const indexCurrent = Array.from(sliderToggleArray).findIndex((item) => item === sliderToggleCurrent);
+console.log (indexCurrent);
+}
+
+sliderToggleArray.forEach((toggle) => {
+  toggle.addEventListener('click', transformSlide);
+})
