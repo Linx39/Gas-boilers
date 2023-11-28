@@ -74,42 +74,49 @@ const sliderToggleCurrentClass = `slider__toggle--current`;
 const brendItemCurrentClass = `brend-list__item--current`;
 const sliderItemCurrentClass = `slider__item--current`;
 
-const itemWidth = sliderItemArray[0].clientWidth;
-const listScrollWidth = sliderListElement.scrollWidth;
-const listClientWidth = sliderListElement.clientWidth;
-const hiddenWidth = listScrollWidth - listClientWidth;
-
-const itemGup = (listScrollWidth - sliderItemArray.length * itemWidth) / (sliderItemArray.length - 1);
-const itemTranslate = itemWidth + itemGup;
-
-const transformSlider = (evt) => {
+const translateSlider = (evt) => {
   const sliderToggleCurrent = sliderTogglesElement.querySelector(`.${sliderToggleCurrentClass}`);
   const sliderItemCurrent = sliderListElement.querySelector(`.${sliderItemCurrentClass}`);
 
   const indexCurrent = [...sliderToggleArray].findIndex((item) => item === sliderToggleCurrent);
-  const indexClick = [...sliderToggleArray].findIndex((item) => item === evt.target);
+  const indexSelected = [...sliderToggleArray].findIndex((item) => item === evt.target);
 
-  const listTranslate = indexClick * itemTranslate;
-
-  if (indexCurrent !== indexClick) {
-    if(listTranslate < hiddenWidth) {
-      sliderListElement.style.transform = `translateX(${-listTranslate}px)`;
-    } else {
-      sliderWrapper.classList.add(sliderWrapperClass);
-
-      sliderListElement.style.transform = `translateX(${-hiddenWidth - 16}px)`;
-    }
-
-    sliderToggleCurrent.classList.remove(sliderToggleCurrentClass);
-    evt.target.classList.add(sliderToggleCurrentClass);
-
-    sliderItemCurrent.classList.remove(brendItemCurrentClass);
-    sliderItemCurrent.classList.remove(sliderItemCurrentClass);
-    sliderItemArray[indexClick].classList.add(sliderItemCurrentClass);
-    sliderItemArray[indexClick].classList.add(brendItemCurrentClass);
+  if (indexCurrent === indexSelected) {
+    return;
   }
+
+  const listScrollWidth = sliderListElement.scrollWidth;
+  const itemWidth = sliderItemArray[0].clientWidth;
+  const listClientWidth = sliderListElement.clientWidth;
+  const listHiddenWidth = listScrollWidth - listClientWidth;
+
+  const itemGup = (listScrollWidth - sliderItemArray.length * itemWidth) / (sliderItemArray.length - 1);
+  const itemWidthFull = itemWidth + itemGup;
+  const positionSelected = indexSelected * itemWidthFull;
+  let positionTranslate = 0;
+
+  if (positionSelected + itemWidthFull > listClientWidth) {
+    if(positionSelected < listHiddenWidth) {
+      positionTranslate = -positionSelected;
+    } else {
+      positionTranslate = -listHiddenWidth - 16;
+      sliderWrapper.classList.add(sliderWrapperClass);
+    }
+  }
+
+  if (positionTranslate !==0) {
+    sliderListElement.style.transform = `translateX(${positionTranslate}px)`;
+  }
+
+  sliderToggleCurrent.classList.remove(sliderToggleCurrentClass);
+  evt.target.classList.add(sliderToggleCurrentClass);
+
+  sliderItemCurrent.classList.remove(brendItemCurrentClass);
+  sliderItemCurrent.classList.remove(sliderItemCurrentClass);
+  sliderItemArray[indexSelected].classList.add(sliderItemCurrentClass);
+  sliderItemArray[indexSelected].classList.add(brendItemCurrentClass);
 }
 
 sliderToggleArray.forEach((toggle) => {
-  toggle.addEventListener('click', transformSlider);
+  toggle.addEventListener('click', translateSlider);
 })

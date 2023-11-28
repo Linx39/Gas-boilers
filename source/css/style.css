@@ -1211,8 +1211,10 @@ img {
 }
 @media (min-width: 1300px) {
   .brend-list {
-    grid-auto-flow: unset;
-    gap: 83px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 53px;
+    column-gap: 83px;
     justify-content: center;
   }
 }

@@ -7,8 +7,14 @@
   justify-content: start;
 
   @media (min-width: @desktop-width) {
-    grid-auto-flow: unset;
-    gap: 83px;
+    // grid-auto-flow: unset;
+    // gap: 83px;
+    // justify-content: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 53px;
+    column-gap: 83px;
     justify-content: center;
   }
 }
