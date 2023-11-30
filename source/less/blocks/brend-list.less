@@ -6,32 +6,34 @@
   gap: 28px;
   justify-content: start;
 
-  @media (min-width: @desktop-width) {
-    // grid-auto-flow: unset;
-    // gap: 83px;
-    // justify-content: center;
+  &--flex {
+    display: flex;
+    justify-content: center;
+  }
 
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 53px;
-    column-gap: 83px;
+    row-gap: 50px;
+    column-gap: 80px;
     justify-content: center;
   }
 }
 
-.brend-list__link {
-  .button();
+.brend-list__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   width: 240px;
   height: 240px;
 
-  border: 4px solid @color-blue;
+  outline: 4px solid @color-blue;
+  outline-offset: -4px;
   border-radius: 20px;
 }
 
-.brend-list__item--current .brend-list__link {
-  border: 4px solid @color-dark-blue;
+.brend-list__item--current .brend-list__img {
+  @media (max-width: (@desktop-width - 1)) {
+    outline: 4px solid @color-dark-blue;
+  }
 }

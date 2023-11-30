@@ -27,7 +27,6 @@
   margin-bottom: 38px;
 
   @media (min-width: @desktop-width) {
-    .wrapper();
     margin-bottom: 77px;
   }
 }
@@ -37,20 +36,13 @@
     box-sizing: border-box;
     width: calc(100vw - 21.25px);
     padding-left: 16px;
+    padding-right: 16px;
     margin-bottom: 36px;
     overflow: hidden;
-
-    &--transform {
-      padding-right: 16px;
-    }
   }
-}
 
-.catalog__brend-list {
-  @media (max-width: (@desktop-width - 1)) {
-    // transform: translateX(-240px);
-    // position: relative;
-    // width: 100vw;
+  @media (min-width: @desktop-width) {
+    padding: 0 204px;
   }
 }
 

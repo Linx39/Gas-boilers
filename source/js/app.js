@@ -1,3 +1,5 @@
+import {recizeSliderWidth, changeSlider, controlSlider} from './slider.js';
+
 const mainNav = document.querySelector('.main-nav');
 const mainNavToggle = document.querySelector('.main-nav__toggle');
 
@@ -57,66 +59,22 @@ callButtons.forEach((button) => {
 })
 
 
-//Функция переключателя слайдера
+// Управление слайдером
+const brendSlider = document.querySelectorAll(`.catalog__brend`);
+const itemBrendCurrentClass = `brend-list__item--current`;
 
-const catalogItem1Element = document.querySelector(`#catalog-item-1`);
-const sliderWrapper = catalogItem1Element.querySelector(`.catalog__brend-wrapper`);
-const sliderWrapperClass = `catalog__brend-wrapper--transform`;
+const accessorySlider = document.querySelector(`.plumbing__accessory`);
+const itemAccessoryCurrentClass = `accessory-list__item--current`;
 
-// const sliderWindow = document.querySelector(`.slider__wrapper`);
-const sliderTogglesElement = catalogItem1Element.querySelector('.slider__toggles');
-const sliderListElement = catalogItem1Element.querySelector('.slider__list');
+brendSlider.forEach((slider) => controlSlider(slider, itemBrendCurrentClass));
+controlSlider(accessorySlider, itemAccessoryCurrentClass);
 
-const sliderToggleArray = sliderTogglesElement.querySelectorAll('.slider__toggle');
-const sliderItemArray = sliderListElement.querySelectorAll('.slider__item');
-
-const sliderToggleCurrentClass = `slider__toggle--current`;
-const brendItemCurrentClass = `brend-list__item--current`;
-const sliderItemCurrentClass = `slider__item--current`;
-
-const translateSlider = (evt) => {
-  const sliderToggleCurrent = sliderTogglesElement.querySelector(`.${sliderToggleCurrentClass}`);
-  const sliderItemCurrent = sliderListElement.querySelector(`.${sliderItemCurrentClass}`);
-
-  const indexCurrent = [...sliderToggleArray].findIndex((item) => item === sliderToggleCurrent);
-  const indexSelected = [...sliderToggleArray].findIndex((item) => item === evt.target);
-
-  if (indexCurrent === indexSelected) {
-    return;
-  }
-
-  const listScrollWidth = sliderListElement.scrollWidth;
-  const itemWidth = sliderItemArray[0].clientWidth;
-  const listClientWidth = sliderListElement.clientWidth;
-  const listHiddenWidth = listScrollWidth - listClientWidth;
-
-  const itemGup = (listScrollWidth - sliderItemArray.length * itemWidth) / (sliderItemArray.length - 1);
-  const itemWidthFull = itemWidth + itemGup;
-  const positionSelected = indexSelected * itemWidthFull;
-  let positionTranslate = 0;
-
-  if (positionSelected + itemWidthFull > listClientWidth) {
-    if(positionSelected < listHiddenWidth) {
-      positionTranslate = -positionSelected;
-    } else {
-      positionTranslate = -listHiddenWidth - 16;
-      sliderWrapper.classList.add(sliderWrapperClass);
-    }
-  }
-
-  if (positionTranslate !==0) {
-    sliderListElement.style.transform = `translateX(${positionTranslate}px)`;
-  }
-
-  sliderToggleCurrent.classList.remove(sliderToggleCurrentClass);
-  evt.target.classList.add(sliderToggleCurrentClass);
-
-  sliderItemCurrent.classList.remove(brendItemCurrentClass);
-  sliderItemCurrent.classList.remove(sliderItemCurrentClass);
-  sliderItemArray[indexSelected].classList.add(sliderItemCurrentClass);
-  sliderItemArray[indexSelected].classList.add(brendItemCurrentClass);
-}
-
-sliderToggleArray.forEach((toggle) => {
-  toggle.addEventListener('click', translateSlider);
+changeSlider(brendSlider[1], `brend-list--flex`);
+window.addEventListener('resize', () => {
+    changeSlider(accessorySlider);
 })
+
+// recizeSliderWidth(accessorySlider);
+// window.addEventListener('resize', () => {
+//     recizeSliderWidth(accessorySlider);
+// })
