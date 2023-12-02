@@ -1,4 +1,4 @@
-import {recizeSliderWidth, changeSlider, controlSlider} from './slider.js';
+import {recizeSliderWidth, changeSliderStyle, controlSlider} from './slider.js';
 
 const mainNav = document.querySelector('.main-nav');
 const mainNavToggle = document.querySelector('.main-nav__toggle');
@@ -63,15 +63,18 @@ callButtons.forEach((button) => {
 const brendSlider = document.querySelectorAll(`.catalog__brend`);
 const itemBrendCurrentClass = `brend-list__item--current`;
 
-const accessorySlider = document.querySelector(`.plumbing__accessory`);
+const accessorySlider = document.querySelector(`.sub-catalog`);
 const itemAccessoryCurrentClass = `accessory-list__item--current`;
+
+const sliders = [...brendSlider, accessorySlider];
 
 brendSlider.forEach((slider) => controlSlider(slider, itemBrendCurrentClass));
 controlSlider(accessorySlider, itemAccessoryCurrentClass);
 
-changeSlider(brendSlider[1], `brend-list--flex`);
-window.addEventListener('resize', () => {
-    changeSlider(accessorySlider);
+sliders.forEach((slider) => {
+  changeSliderStyle(slider);
+
+  window.addEventListener('resize', () => changeSliderStyle(slider));
 })
 
 // recizeSliderWidth(accessorySlider);

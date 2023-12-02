@@ -1,3 +1,25 @@
+.slider__list {
+  .list();
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  grid-auto-flow: column;
+  gap: 28px;
+  justify-content: start;
+
+  &--center {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 80px;
+    justify-content: center;
+  }
+}
+
 .slider__toggles {
   .list();
   display: grid;
