@@ -5,26 +5,17 @@ const SLIDER_TOGGLE_CURRENT_CLASS = `slider__toggle--current`;
 const SLIDER_LIST_CLASS = `slider__list`;
 const SLIDER_ITEM_CLASS = `slider__item`;
 const SLIDER_ITEM_CURRENT_CLASS = `slider__item--current`;
+const DESKTOP_WIDTH = 1300;
 
-
-export const recizeSliderWidth = (slider) => {
+export const setSliderWidth = (slider) => {
+  const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
   const sliderWrapperElement = slider.querySelector(`.${SLIDER_WRAPPER_CLASS}`);
-  const listElement = slider.querySelector(`.${SLIDER_LIST_CLASS}`);
-  const listScrollWidth = listElement.scrollWidth;
 
-  // const windowsWidth = window.innerWidth;
-  const documentWidth = document.documentElement.clientWidth;
-  // const scrollbarWidth = windowsWidth - documentWidth;
-
-  if (listScrollWidth > documentWidth) {
-    sliderWrapperElement.style.width = documentWidth + `px`;
+  if(mediaQuery.matches) {
+    sliderWrapperElement.style.width = `auto`;
+  } else {
+    sliderWrapperElement.style.width = document.documentElement.clientWidth + `px`;
   }
-
-  // window.addEventListener('resize', () => {
-  //   if (listScrollWidth > documentWidth) {
-  //     sliderWrapperElement.style.width = documentWidth + `px`;
-  //   }
-  // })
 }
 
 const changeSliderPosition = (slider, items, index) => {
@@ -40,7 +31,16 @@ const changeSliderPosition = (slider, items, index) => {
   listElement.style.transform = `translateX(${sliderPosition}px)`;
 }
 
-export const changeSliderStyle = (slider) => {
+export const setSliderStyle = (slider) => {
+  const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
+  if(mediaQuery.matches) {
+    if (listElement.classList.contains(SLIDER_LIST_CENTER_CLASS)) {
+      listElement.classList.remove(SLIDER_LIST_CENTER_CLASS);
+    }
+
+    return;
+  }
+
   const listElement = slider.querySelector(`.${SLIDER_LIST_CLASS}`);
   const listScrollWidth = listElement.scrollWidth;
   const listClientWidth = listElement.clientWidth;
@@ -59,7 +59,9 @@ export const changeSliderStyle = (slider) => {
 
     changeSliderPosition(slider, items, indexCurrent);
 
-    listElement.classList.remove(SLIDER_LIST_CENTER_CLASS);
+    if (listElement.classList.contains(SLIDER_LIST_CENTER_CLASS)) {
+      listElement.classList.remove(SLIDER_LIST_CENTER_CLASS);
+    }
   }
 }
 

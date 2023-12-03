@@ -1,4 +1,4 @@
-import {recizeSliderWidth, changeSliderStyle, controlSlider} from './slider.js';
+import {setSliderWidth, setSliderStyle, controlSlider} from './slider.js';
 
 const mainNav = document.querySelector('.main-nav');
 const mainNavToggle = document.querySelector('.main-nav__toggle');
@@ -62,22 +62,27 @@ callButtons.forEach((button) => {
 // Управление слайдером
 const brendSlider = document.querySelectorAll(`.catalog__brend`);
 const itemBrendCurrentClass = `brend-list__item--current`;
-
 const accessorySlider = document.querySelector(`.sub-catalog`);
 const itemAccessoryCurrentClass = `accessory-list__item--current`;
 
 const sliders = [...brendSlider, accessorySlider];
 
+
+const mediaQuery = window.matchMedia(`(min-width: 1300px)`)
+if(!mediaQuery.matches) {
+}
+
+sliders.forEach((slider) => {
+  setSliderWidth(slider);
+  setSliderStyle(slider);
+
+  window.addEventListener('resize', () => {
+      setSliderWidth(slider);
+      setSliderStyle(slider);
+  });
+});
+
 brendSlider.forEach((slider) => controlSlider(slider, itemBrendCurrentClass));
 controlSlider(accessorySlider, itemAccessoryCurrentClass);
 
-sliders.forEach((slider) => {
-  changeSliderStyle(slider);
 
-  window.addEventListener('resize', () => changeSliderStyle(slider));
-})
-
-// recizeSliderWidth(accessorySlider);
-// window.addEventListener('resize', () => {
-//     recizeSliderWidth(accessorySlider);
-// })

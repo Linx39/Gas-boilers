@@ -1205,7 +1205,6 @@ img {
 @media (max-width: 1299px) {
   .catalog__brend-wrapper {
     box-sizing: border-box;
-    width: calc(100vw - 21.25px);
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 36px;
@@ -1598,7 +1597,6 @@ img {
 @media (max-width: 1299px) {
   .sub-catalog__wrapper {
     box-sizing: border-box;
-    width: calc(100vw - 21.25px);
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 36px;
