@@ -12,22 +12,6 @@
   }
 }
 
-.consultation--content-opened .consultation__content {
-  display: block;
-}
-
-.consultation--content-opened .consultation__answer {
-  display: none;
-}
-
-.consultation--answer-opened .consultation__content {
-  display: none;
-}
-
-.consultation--answer-opened .consultation__answer {
-  display: block;
-}
-
 .consultation__content {
   padding-top: 58px;
   padding-bottom: 26px;
@@ -43,6 +27,8 @@
 }
 
 .consultation__answer {
+  display: none;
+
   padding-top: 48px;
   padding-bottom: 70px;
   padding-left: 34px;
@@ -54,6 +40,14 @@
     padding-left: 190px;
     padding-right: 190px;
   }
+}
+
+.consultation--success .consultation__content {
+  display: none;
+}
+
+.consultation--success .consultation__answer {
+  display: block;
 }
 
 .consultation__tittle {

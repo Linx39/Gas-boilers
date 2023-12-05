@@ -1,76 +1,26 @@
+import {controlMainNavToogleClick} from './main-nav-toggle.js';
+import {setConsultationFormSubmit, setConsultationDefault} from './consultation.js';
+import {openModal, closeModal} from './modal.js';
 import {setSliderWidth, setSliderStyle, controlSlider} from './slider.js';
+import {loadMap, setMapViewCenter} from './map.js';
 
-const mainNav = document.querySelector('.main-nav');
-const mainNavToggle = document.querySelector('.main-nav__toggle');
+controlMainNavToogleClick();
+setConsultationFormSubmit();
 
-mainNav.classList.remove('main-nav--nojs');
-
-mainNavToggle.addEventListener('click', () =>
-  {if (mainNav.classList.contains('main-nav--closed')) {
-      mainNav.classList.remove('main-nav--closed');
-      mainNav.classList.add('main-nav--opened');
-    } else {
-      mainNav.classList.add('main-nav--closed');
-      mainNav.classList.remove('main-nav--opened');
-    }
-  }
-);
-
-const consultation = document.querySelector('.consultation');
-const consultationContent = document.querySelector('.consultation__content');
-const consultationAnswer = document.querySelector('.consultation__answer');
-const consultationButton = document.querySelector('.consultation__button');
-
-consultationButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
-
-  if (consultation.classList.contains('consultation--content-opened')) {
-    consultation.classList.remove('consultation--content-opened');
-    consultation.classList.add('consultation--answer-opened');
-  }
-});
-
-
-const modal = document.querySelector('.modal');
-const modalButton = document.querySelector('.modal__button');
-
-modalButton.addEventListener('click', () => {
-  if (modal.classList.contains('modal--closed')) {
-    modal.classList.remove('modal--closed');
-    modal.classList.add('modal--opened');
-  } else {
-    modal.classList.add('modal--closed');
-    modal.classList.remove('modal--opened');
-  }
-
-  if (consultation.classList.contains('consultation--answer-opened')) {
-    consultation.classList.remove('consultation--answer-opened');
-    // consultation.classList.add('consultation--content-opened');
-  }
-});
-
+// Управление открытием/закрытием модального окна
 const callButtons= document.querySelectorAll(['.app-button--call', '.app-button--staff']);
+callButtons.forEach((button) =>  openModal(button));
 
-callButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    modal.classList.remove('modal--closed');
-    modal.classList.add('modal--opened');
-  });
-})
-
+closeModal(setConsultationDefault);
 
 // Управление слайдером
+const ITEM_BREND_CURRENT_CLASS = `brend-list__item--current`;
+const ITEM_ACCESSORY_CURRENT_CLASS = `accessory-list__item--current`;
+
 const brendSlider = document.querySelectorAll(`.catalog__brend`);
-const itemBrendCurrentClass = `brend-list__item--current`;
 const accessorySlider = document.querySelector(`.sub-catalog`);
-const itemAccessoryCurrentClass = `accessory-list__item--current`;
 
 const sliders = [...brendSlider, accessorySlider];
-
-
-const mediaQuery = window.matchMedia(`(min-width: 1300px)`)
-if(!mediaQuery.matches) {
-}
 
 sliders.forEach((slider) => {
   setSliderWidth(slider);
@@ -82,7 +32,15 @@ sliders.forEach((slider) => {
   });
 });
 
-brendSlider.forEach((slider) => controlSlider(slider, itemBrendCurrentClass));
-controlSlider(accessorySlider, itemAccessoryCurrentClass);
+brendSlider.forEach((slider) => controlSlider(slider, ITEM_BREND_CURRENT_CLASS));
+controlSlider(accessorySlider, ITEM_ACCESSORY_CURRENT_CLASS);
 
 
+// Загрузка карты
+const contactsAdressElements = document.querySelectorAll(`.contacts__item--adress`);
+
+loadMap();
+
+contactsAdressElements.forEach((adress) => {
+  adress.addEventListener('click', setMapViewCenter);
+})

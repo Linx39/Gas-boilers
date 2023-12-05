@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Газовые котлы</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/leaflet.css">
   </head>
 
   <body class="page__body">
@@ -1190,13 +1191,8 @@
         </div>
       </div>
 
-      <div class="page-footer__map" id="map">
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
-          <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
-          <source media="(min-width: 1300px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.jpg 2x">
-          <img src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" alt="Карта с адресом.">
-        </picture>
+      <div class="page-footer__map-container">
+        <div class="page-footer__map" id="map" style="height: 440px;"></div>
 
         <button class="page-footer__map-button app-button app-button--call app-interactive app-interactive--call app-interactive--small" type="button">
           <span class="visually-hidden">Заказать звонок</span>
@@ -1213,20 +1209,20 @@
           <span class="visually-hidden">Закрыть окно</span>
         </button>
 
-        <section class="consultation consultation--content-opened">
+        <section class="consultation">
           <div class="consultation__content">
             <h2 class="consultation__tittle consultation__tittle--content">Получите консультацию специалиста в удобное для вас время</h2>
 
             <form class="consultation__form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="consultation__fields-container">
-                <label class="consultation__label consultation__label-user" for="user">
-                  <input class="consultation__field app-field app-interactive app-interactive--user" type="text" name="user" id="user" placeholder="Имя" required>
+                <label class="consultation__label" for="user">
+                  <input class="consultation__field consultation__field--user app-field app-interactive app-interactive--user" type="text" name="user" id="user" placeholder="Имя" required>
                 </label>
-                <label class="consultation__label consultation__label-phone" for="phone">
-                  <input class="consultation__field app-field app-interactive app-interactive--phone" type="text" name="phone" id="phone" placeholder="Телефон" required>
+                <label class="consultation__label" for="phone">
+                  <input class="consultation__field consultation__field--phone app-field app-interactive app-interactive--phone" type="phone" name="phone" id="phone" placeholder="Телефон" required>
                 </label>
-                <label class="consultation__label consultation__label-time" for="time">
-                  <input class="consultation__field app-field app-interactive app-interactive--time" type="text" name="time" id="time" placeholder="Время">
+                <label class="consultation__label" for="time">
+                  <input class="consultation__field consultation__field--time app-field app-interactive app-interactive--time" type="text" name="time" id="time" placeholder="Время">
                 </label>
               </div>
 
@@ -1244,5 +1240,6 @@
     </div>
 
     <script type="module" src="./js/app.js" defer></script>
+    <script src="./js/leaflet.js"></script>
   </body>
 </html>

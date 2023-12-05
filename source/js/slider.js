@@ -26,14 +26,19 @@ const changeSliderPosition = (slider, items, index) => {
   const itemGup = (listScrollWidth - items.length * itemWidth) / (items.length - 1);
   const itemWidthFull = itemWidth + itemGup;
 
-  const sliderPosition = Math.max(-index * itemWidthFull, listClientWidth - listScrollWidth);
+  const sliderPosition = Math.min(index * itemWidthFull, listScrollWidth - listClientWidth);
 
-  listElement.style.transform = `translateX(${sliderPosition}px)`;
+  listElement.style.transform = `translateX(${-sliderPosition}px)`;
 }
 
 export const setSliderStyle = (slider) => {
+  const listElement = slider.querySelector(`.${SLIDER_LIST_CLASS}`);
+
   const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
+
   if(mediaQuery.matches) {
+    listElement.style.transform = `translateX(0)`;
+
     if (listElement.classList.contains(SLIDER_LIST_CENTER_CLASS)) {
       listElement.classList.remove(SLIDER_LIST_CENTER_CLASS);
     }
@@ -41,7 +46,6 @@ export const setSliderStyle = (slider) => {
     return;
   }
 
-  const listElement = slider.querySelector(`.${SLIDER_LIST_CLASS}`);
   const listScrollWidth = listElement.scrollWidth;
   const listClientWidth = listElement.clientWidth;
 
