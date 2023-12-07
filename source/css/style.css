@@ -450,10 +450,6 @@ img {
   gap: 28px;
   justify-content: start;
 }
-.slider__list--center {
-  display: flex;
-  justify-content: center;
-}
 @media (min-width: 1300px) {
   .slider__list {
     display: flex;
@@ -462,6 +458,10 @@ img {
     column-gap: 80px;
     justify-content: center;
   }
+}
+.slider--center .slider__list {
+  display: flex;
+  justify-content: center;
 }
 .slider__toggles {
   margin-top: 0;
@@ -472,6 +472,9 @@ img {
   grid-template-columns: repeat(auto-fit, 12px);
   gap: 12px;
   justify-content: center;
+}
+.slider--center .slider__toggles {
+  display: none;
 }
 .slider__toggle {
   display: block;
@@ -724,9 +727,8 @@ img {
   }
 }
 .page-header__tittle {
-  box-sizing: border-box;
-  width: 327px;
-  padding-left: 7px;
+  max-width: 593px;
+  padding: 0 55px;
   margin: 0;
   margin-bottom: 30px;
   font-size: 40px;
@@ -737,9 +739,7 @@ img {
 }
 @media (min-width: 1300px) {
   .page-header__tittle {
-    width: 593px;
     margin-bottom: 24px;
-    padding-left: 0;
     font-size: 65px;
     line-height: 75px;
   }
@@ -1063,13 +1063,7 @@ img {
     background-size: 2178px auto;
   }
 }
-.promotion__list {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.promotion__list-item {
+.promotion__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1121,12 +1115,12 @@ img {
     margin-bottom: 45px;
   }
 }
-.promotion__item {
+.promotion__date-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.promotion__item-value {
+.promotion__date-item-value {
   box-sizing: border-box;
   min-width: 50px;
   min-height: 50px;
@@ -1142,7 +1136,7 @@ img {
   font-weight: 300;
   text-align: center;
 }
-.promotion__item-text {
+.promotion__date-item-text {
   font-size: 10px;
   line-height: 12px;
   font-weight: 300;
@@ -1186,6 +1180,7 @@ img {
 @media (min-width: 1300px) {
   .catalog__title {
     width: auto;
+    padding: 0 30px;
     margin-bottom: 45px;
   }
 }
@@ -1208,7 +1203,7 @@ img {
 }
 @media (min-width: 1300px) {
   .catalog__brend-wrapper {
-    padding: 0 204px;
+    padding: 0 30px;
   }
 }
 .catalog__toggles {
@@ -1552,7 +1547,7 @@ img {
 .accessory-list__img img {
   width: 240px;
 }
-.accessory__subtitle {
+.accessory-list__subtitle {
   margin: 0;
   font-size: 16px;
   line-height: 20px;
@@ -1705,6 +1700,7 @@ img {
 @media (min-width: 1300px) {
   .page-footer__map {
     border-radius: 80px;
+    z-index: 0;
   }
 }
 .page-footer__map-button {
@@ -1716,7 +1712,7 @@ img {
     position: absolute;
     right: 30px;
     bottom: 26px;
-    z-index: 1000;
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

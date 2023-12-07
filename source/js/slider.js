@@ -1,5 +1,5 @@
 const SLIDER_WRAPPER_CLASS = `slider__wrapper`;
-const SLIDER_LIST_CENTER_CLASS = `slider__list--center`;
+const SLIDER_CENTER_CLASS = `slider--center`;
 const SLIDER_TOGGLE_CLASS = `slider__toggle`;
 const SLIDER_TOGGLE_CURRENT_CLASS = `slider__toggle--current`;
 const SLIDER_LIST_CLASS = `slider__list`;
@@ -8,8 +8,8 @@ const SLIDER_ITEM_CURRENT_CLASS = `slider__item--current`;
 const DESKTOP_WIDTH = 1300;
 
 export const setSliderWidth = (slider) => {
-  const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
   const sliderWrapperElement = slider.querySelector(`.${SLIDER_WRAPPER_CLASS}`);
+  const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
 
   if(mediaQuery.matches) {
     sliderWrapperElement.style.width = `auto`;
@@ -31,7 +31,7 @@ const changeSliderPosition = (slider, items, index) => {
   listElement.style.transform = `translateX(${-sliderPosition}px)`;
 }
 
-export const setSliderStyle = (slider) => {
+export const setSliderClass = (slider) => {
   const listElement = slider.querySelector(`.${SLIDER_LIST_CLASS}`);
 
   const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
@@ -39,8 +39,8 @@ export const setSliderStyle = (slider) => {
   if(mediaQuery.matches) {
     listElement.style.transform = `translateX(0)`;
 
-    if (listElement.classList.contains(SLIDER_LIST_CENTER_CLASS)) {
-      listElement.classList.remove(SLIDER_LIST_CENTER_CLASS);
+    if (slider.classList.contains(SLIDER_CENTER_CLASS)) {
+      slider.classList.remove(SLIDER_CENTER_CLASS);
     }
 
     return;
@@ -51,8 +51,7 @@ export const setSliderStyle = (slider) => {
 
   if (listClientWidth === listScrollWidth) {
     listElement.style.transform = `translateX(0)`;
-
-    listElement.classList.add(SLIDER_LIST_CENTER_CLASS);
+    slider.classList.add(SLIDER_CENTER_CLASS);
   }
 
   if (listClientWidth < listScrollWidth) {
@@ -63,8 +62,8 @@ export const setSliderStyle = (slider) => {
 
     changeSliderPosition(slider, items, indexCurrent);
 
-    if (listElement.classList.contains(SLIDER_LIST_CENTER_CLASS)) {
-      listElement.classList.remove(SLIDER_LIST_CENTER_CLASS);
+    if (slider.classList.contains(SLIDER_CENTER_CLASS)) {
+      slider.classList.remove(SLIDER_CENTER_CLASS);
     }
   }
 }

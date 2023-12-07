@@ -1,17 +1,11 @@
-import {controlMainNavToogleClick} from './main-nav-toggle.js';
-import {setConsultationFormSubmit, setConsultationDefault} from './consultation.js';
-import {openModal, closeModal} from './modal.js';
-import {setSliderWidth, setSliderStyle, controlSlider} from './slider.js';
+import {handleMainNavToogleClick} from './main-nav-toggle.js';
+import {setSliderWidth, setSliderClass, controlSlider} from './slider.js';
 import {loadMap, setMapViewCenter} from './map.js';
+import {openModal, closeModal} from './modal.js';
+import {setConsultationFormSubmit, checkConsultationField, setConsultationFormDefault} from './consultation.js';
 
-controlMainNavToogleClick();
-setConsultationFormSubmit();
-
-// Управление открытием/закрытием модального окна
-const callButtons= document.querySelectorAll(['.app-button--call', '.app-button--staff']);
-callButtons.forEach((button) =>  openModal(button));
-
-closeModal(setConsultationDefault);
+// Управление кнопкой меню
+handleMainNavToogleClick();
 
 // Управление слайдером
 const ITEM_BREND_CURRENT_CLASS = `brend-list__item--current`;
@@ -24,11 +18,11 @@ const sliders = [...brendSlider, accessorySlider];
 
 sliders.forEach((slider) => {
   setSliderWidth(slider);
-  setSliderStyle(slider);
+  setSliderClass(slider);
 
   window.addEventListener('resize', () => {
       setSliderWidth(slider);
-      setSliderStyle(slider);
+      setSliderClass(slider);
   });
 });
 
@@ -44,3 +38,14 @@ loadMap();
 contactsAdressElements.forEach((adress) => {
   adress.addEventListener('click', setMapViewCenter);
 })
+
+
+// Управление открытием/закрытием модального окна
+const callButtons= document.querySelectorAll(['.app-button--call', '.app-button--staff']);
+callButtons.forEach((button) =>  openModal(button));
+
+closeModal(setConsultationFormDefault);
+
+// Управление формой
+checkConsultationField();
+setConsultationFormSubmit();

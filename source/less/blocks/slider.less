@@ -6,11 +6,6 @@
   gap: 28px;
   justify-content: start;
 
-  &--center {
-    display: flex;
-    justify-content: center;
-  }
-
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -20,12 +15,21 @@
   }
 }
 
+.slider--center .slider__list {
+  display: flex;
+  justify-content: center;
+}
+
 .slider__toggles {
   .list();
   display: grid;
   grid-template-columns: repeat(auto-fit, 12px);
   gap: 12px;
   justify-content: center;
+}
+
+.slider--center .slider__toggles {
+  display: none;
 }
 
 .slider__toggle {
