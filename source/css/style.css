@@ -492,9 +492,6 @@ img {
   border-radius: 50%;
   background-color: #73C1F2;
 }
-.slider__toggles--light-theme .slider__toggle {
-  background-color: #ffffff;
-}
 .slider__toggle:hover {
   background-color: #0487D9;
 }
@@ -1154,10 +1151,8 @@ img {
   outline-offset: -4px;
   border-radius: 20px;
 }
-@media (max-width: 1299px) {
-  .brend-list__item--current .brend-list__img {
-    outline: 4px solid #0487D9;
-  }
+.brend-list__item--current .brend-list__img {
+  outline: 4px solid #0487D9;
 }
 .catalog__item:not(:last-of-type) {
   margin-bottom: 39px;

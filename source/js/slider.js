@@ -7,7 +7,7 @@ const SLIDER_ITEM_CLASS = `slider__item`;
 const SLIDER_ITEM_CURRENT_CLASS = `slider__item--current`;
 const DESKTOP_WIDTH = 1300;
 
-export const setSliderWidth = (slider) => {
+const setSliderWidth = (slider) => {
   const sliderWrapperElement = slider.querySelector(`.${SLIDER_WRAPPER_CLASS}`);
   const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
 
@@ -31,7 +31,24 @@ const changeSliderPosition = (slider, items, index) => {
   listElement.style.transform = `translateX(${-sliderPosition}px)`;
 }
 
-export const setSliderClass = (slider) => {
+const setSliderItemCurrentClass = (listElement, items, indexCurrent, itemCurrentClass) => {
+  const itemCurrentElement = items[indexCurrent];
+
+  // if (!itemCurrentElement) {
+  //   return;
+  // }
+
+  const listScrollWidth = listElement.scrollWidth;
+  const listClientWidth = listElement.clientWidth;
+
+  if (listClientWidth < listScrollWidth) {
+    itemCurrentElement.classList.add(itemCurrentClass);
+  } else {
+    itemCurrentElement.classList.remove(itemCurrentClass);
+  }
+}
+
+const setSliderClass = (slider, itemCurrentClass) => {
   const listElement = slider.querySelector(`.${SLIDER_LIST_CLASS}`);
 
   const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
@@ -54,11 +71,17 @@ export const setSliderClass = (slider) => {
     slider.classList.add(SLIDER_CENTER_CLASS);
   }
 
+
+  const items = slider.querySelectorAll(`.${SLIDER_ITEM_CLASS}`);
+  const toggles = slider.querySelectorAll(`.${SLIDER_TOGGLE_CLASS}`);
+  const toggleCurrent = slider.querySelector(`.${SLIDER_TOGGLE_CURRENT_CLASS}`);
+  const indexCurrent = [...toggles].findIndex((item) => item === toggleCurrent);
+
   if (listClientWidth < listScrollWidth) {
-    const items = slider.querySelectorAll(`.${SLIDER_ITEM_CLASS}`);
-    const toggles = slider.querySelectorAll(`.${SLIDER_TOGGLE_CLASS}`);
-    const toggleCurrent = slider.querySelector(`.${SLIDER_TOGGLE_CURRENT_CLASS}`);
-    const indexCurrent = [...toggles].findIndex((item) => item === toggleCurrent);
+    // const items = slider.querySelectorAll(`.${SLIDER_ITEM_CLASS}`);
+    // const toggles = slider.querySelectorAll(`.${SLIDER_TOGGLE_CLASS}`);
+    // const toggleCurrent = slider.querySelector(`.${SLIDER_TOGGLE_CURRENT_CLASS}`);
+    // const indexCurrent = [...toggles].findIndex((item) => item === toggleCurrent);
 
     changeSliderPosition(slider, items, indexCurrent);
 
@@ -66,9 +89,11 @@ export const setSliderClass = (slider) => {
       slider.classList.remove(SLIDER_CENTER_CLASS);
     }
   }
+
+  setSliderItemCurrentClass(listElement, items, indexCurrent, itemCurrentClass);
 }
 
-export const controlSlider = (slider, itemCurrentClass) => {
+const handleSliderTogglesClick = (slider, itemCurrentClass) => {
   const items = slider.querySelectorAll(`.${SLIDER_ITEM_CLASS}`);
   const toggles = slider.querySelectorAll(`.${SLIDER_TOGGLE_CLASS}`);
 
@@ -87,13 +112,25 @@ export const controlSlider = (slider, itemCurrentClass) => {
 
     toggleCurrent.classList.remove(SLIDER_TOGGLE_CURRENT_CLASS);
     evt.target.classList.add(SLIDER_TOGGLE_CURRENT_CLASS);
-    itemCurrent.classList.remove(itemCurrentClass);
-    items[indexSelected].classList.add(itemCurrentClass);
     itemCurrent.classList.remove(SLIDER_ITEM_CURRENT_CLASS);
     items[indexSelected].classList.add(SLIDER_ITEM_CURRENT_CLASS);
+    itemCurrent.classList.remove(itemCurrentClass);
+    items[indexSelected].classList.add(itemCurrentClass);
   }
 
   toggles.forEach((toggle) => {
     toggle.addEventListener('click', translateSlider);
   })
+}
+
+export const controlSlider = (slider, itemCurrentClass) => {
+  setSliderWidth(slider);
+  setSliderClass(slider, itemCurrentClass);
+
+  window.addEventListener('resize', () => {
+      setSliderWidth(slider);
+      setSliderClass(slider, itemCurrentClass);
+  });
+
+  handleSliderTogglesClick(slider, itemCurrentClass);
 }
