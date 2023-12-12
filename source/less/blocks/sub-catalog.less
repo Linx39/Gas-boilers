@@ -8,6 +8,16 @@
     color: @color-white;
     background-color: @color-blue;
 
+    background-image: image-set(
+      url("../../img/subcatalog-desktop.webp") type("image/webp") 1x,
+      url("../../img/back-desktop@2x.webp") type("image/webp") 2x,
+      url("../../img/back-desktop.png") type("image/png") 1x,
+      url("../../img/back-desktop@2x.png") type("image/png") 2x,
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     box-shadow: 0 10px 8px 0 #00000024;
   }
 }
@@ -18,11 +28,7 @@
   margin: 0;
   margin-bottom: 25px;
 
-  font-size: 32px;
-  line-height: 39px;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
+  .font-title();
 
   @media (min-width: @desktop-width) {
     padding-left: 230px;
@@ -34,9 +40,7 @@
 .sub-catalog__wrapper {
   @media (max-width: (@desktop-width - 1)) {
     box-sizing: border-box;
-    // width: calc(100vw - 21.25px);
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
     margin-bottom: 36px;
     overflow: hidden;
   }

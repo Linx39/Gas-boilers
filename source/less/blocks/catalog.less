@@ -11,11 +11,7 @@
   width: 309px;
   margin-bottom: 35px;
 
-  font-size: 32px;
-  line-height: 39px;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
+  .font-title();
 
   @media (min-width: @desktop-width) {
     width: auto;
@@ -35,8 +31,7 @@
 .catalog__brend-wrapper {
   @media (max-width: (@desktop-width - 1)) {
     box-sizing: border-box;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
     margin-bottom: 36px;
     overflow: hidden;
   }

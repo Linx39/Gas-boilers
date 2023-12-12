@@ -1,5 +1,5 @@
 .consultation {
-  width: 413px;
+  width: 412px;
 
   min-height: 333px;
 
@@ -15,14 +15,14 @@
 .consultation__content {
   padding-top: 58px;
   padding-bottom: 26px;
-  padding-left: 34px;
-  padding-right: 43px;
+  padding-left: 66px;
+  padding-right: 66px;
 
   @media (min-width: @desktop-width) {
     padding-top: 18px;
     padding-bottom: 26px;
-    padding-left: 34px;
-    padding-right: 43px;
+    padding-left: 38px;
+    padding-right: 38px;
   }
 }
 
@@ -31,8 +31,8 @@
 
   padding-top: 48px;
   padding-bottom: 70px;
-  padding-left: 34px;
-  padding-right: 34px;
+  padding-left: 66px;
+  padding-right: 66px;
 
   @media (min-width: @desktop-width) {
     padding-top: 39px;
@@ -53,11 +53,7 @@
 .consultation__tittle {
   margin: 0 auto;
 
-  font-size: 32px;
-  line-height: 39px;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
+  .font-title();
 
   &--content {
     margin-bottom: 33px;
@@ -113,13 +109,10 @@
   margin: 0 auto;
   padding-top: 51px;
 
-  font-size: 32px;
-  line-height: 39px;
+  .font-title();
   font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
 
-  background-image: url("../../img/buttons/staff.svg");
+  background-image: url("../../img/icons/staff.svg");
   background-size: 35px 35px;
   background-position: top center;
   background-repeat: no-repeat;

@@ -3,7 +3,6 @@
   z-index: 10;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -39,7 +38,14 @@
   background-color: @color-white;
 
   &:hover {
-    color: @color-dark-blue;
+    color: @color-white;
+    background-color: @color-dark-blue;
+  }
+
+  &:focus-visible {
+    color: @color-white;
+    background-color: @color-dark-blue;
+    outline: none;
   }
 
   &:active {

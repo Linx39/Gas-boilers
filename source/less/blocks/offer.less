@@ -20,20 +20,14 @@
 
 
   background-image: image-set(
-    url("../../img/offer-mobile.webp"),
-    url("../../img/offer-mobile.png"),
+    url("../../img/offer-mobile.webp") type("image/webp") 1x,
+    url("../../img/offer-mobile@2x.webp") type("image/webp") 2x,
+    url("../../img/offer-mobile.png") type("image/png") 1x,
+    url("../../img/offer-mobile@2x.png") type("image/png") 2x,
   );
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
-
-  @media (min-resolution: 2dppx) {
-    background-image: image-set(
-      url("../../img/offer-mobile@2x.webp"),
-      url("../../img/offer-mobile@2x.png"),
-    );
-    background-size: 860px auto;
-  }
+  background-size: cover;
 
   @media (min-width: @desktop-width) {
     min-height: 450px;
@@ -43,18 +37,11 @@
     border-radius: 60px;
 
     background-image: image-set(
-      url("../../img/offer-desktop.webp"),
-      url("../../img/offer-desktop.png"),
+      url("../../img/offer-desktop.webp") type("image/webp") 1x,
+      url("../../img/offer-desktop@2x.webp") type("image/webp") 2x,
+      url("../../img/offer-desktop.png") type("image/png") 1x,
+      url("../../img/offer-desktop@2x.png") type("image/png") 2x,
     );
-    background-size: 1097px auto;
-
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(
-        url("../../img/offer-desktop@2x.webp"),
-        url("../../img/offer-desktop@2x.png"),
-      );
-      background-size: 2194px auto;
-    }
   }
 }
 
@@ -70,18 +57,13 @@
     padding-left: 88px;
     margin: 0;
   }
-
 }
 
 .offer__title {
   margin: 0;
   margin-bottom: 43px;
 
-  font-size: 32px;
-  line-height: 39px;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
+  .font-title();
 
   @media (min-width: @desktop-width) {
     margin-bottom: 18px;

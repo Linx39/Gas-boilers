@@ -29,7 +29,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    width: 0;
     height: 0;
     content: "";
   }
@@ -69,6 +68,11 @@
     color: @color-blue;
   }
 
+  &:focus-visible {
+    color: @color-blue;
+    outline: none;
+  }
+
   &:active {
     color: @color-blue;
     opacity: 0.3;
@@ -93,7 +97,14 @@
   background-color: @color-white;
 
   &:hover {
-    color: @color-dark-blue;
+    color: @color-white;
+    background-color: @color-dark-blue;
+  }
+
+  &:focus-visible {
+    color: @color-white;
+    background-color: @color-dark-blue;
+    outline: none;
   }
 
   &:active {

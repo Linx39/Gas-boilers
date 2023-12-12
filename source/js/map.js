@@ -11,13 +11,13 @@ const AddressCoordinates = {
 };
 
 const mapIcon = L.icon({
-  iconUrl: '../img/map-icon.svg',
+  iconUrl: '../img/icons/bullet.svg',
   iconSize: [52, 52],
   iconAnchor: [26, 52],
 });
 
 
-const map = L.map(`map`);
+const map = L.map(`map`, {zoomControl: false});
 
 const addressMarker = L.marker(
   {

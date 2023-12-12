@@ -5,14 +5,13 @@
   grid-template-columns: repeat(auto-fit, 280px);
   grid-template-rows: minmax(833px, max-content);
   grid-auto-rows: minmax(833px, max-content);
-  // grid-template-rows: repeat(auto-fit, minmax(833px, max-content));
   gap: 40px;
   justify-content: center;
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(310px, max-content);
-    grid-auto-rows: minmax(310px, max-content);
+    grid-template-rows: minmax(309px, max-content);
+    grid-auto-rows: minmax(309px, max-content);
     gap: 17px;
   }
 }
@@ -44,6 +43,7 @@
   position: relative;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+
   padding-top: 14px;
   padding-bottom: 16px;
 
@@ -83,10 +83,8 @@
   margin: 0;
   margin-bottom: 3px;
 
-  font-size: 32px;
-  line-height: 39px;
-  font-weight: 800;
-  text-transform: uppercase;
+  .font-title();
+  text-align: left;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 18px;
@@ -106,26 +104,12 @@
   }
 }
 
-.products__description span {
-  letter-spacing: -0.01em;
-
-  &:last-of-type {
-    letter-spacing: -0.02em;
-  }
-
-  &:first-of-type {
-    @media (min-width: @desktop-width) {
-      line-height: 17px;
-    }
-  }
-}
-
 .products__price {
   padding-left: 42px;
   padding-top: 3px;
   padding-bottom: 7px;
 
-  background-image: url("../../img/price-icon.svg");
+  background-image: url("../../img/icons/price.svg");
   background-position: top left;
   background-size: 30px 30px;
   background-repeat: no-repeat;
@@ -139,7 +123,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: inherit;
+
   padding-top: 9px;
   padding-left: 20px;
   padding-right: 20px;
@@ -154,9 +138,11 @@
 
 .products__rating {
   align-self: start;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   margin-bottom: 15px;
   padding-top: 1px;
   padding-bottom: 1px;
@@ -167,7 +153,9 @@
   line-height: 22px;
   font-weight: 500;
 
-  background-image: url("../../img/user.svg"), url("../../img/medal.svg");
+  background-image:
+    url("../../img/icons/verified.svg"),
+    url("../../img/icons/medal.svg");
   background-position: top left 4px, top left 49px;
   background-repeat: no-repeat;
   background-size: 24px 24px, 24px 24px;

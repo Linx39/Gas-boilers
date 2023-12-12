@@ -1,11 +1,7 @@
 .contacts__title {
   margin: 0;
 
-  font-size: 32px;
-  line-height: 39px;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
+  .font-title();
 }
 
 .contacts__list {
@@ -38,8 +34,6 @@
   padding-left: 30px;
 
   &--email {
-    padding-left: 29px;
-
     font-size: 14px;
     line-height: 19px;
     font-weight: 500;
@@ -91,6 +85,11 @@
 
   &:hover {
     color: @color-dark-blue;
+  }
+
+  &:focus-visible {
+    color: @color-dark-blue;
+    outline: none;
   }
 
   &:active {
