@@ -1,3 +1,40 @@
+.link-big-size {
+  width: 42px;
+  height: 42px;
+}
+
+.icon-big-size {
+  &--vk {
+    width: 21px;
+    height: 13px;
+  }
+
+  &--whatsapp {
+    width: 25px;
+    height: 25px;
+  }
+
+  &--viber {
+    width: 23px;
+    height: 22px;
+  }
+}
+
+.link-interactiv(@color) {
+  &:hover {
+    background-color: @color;
+  }
+
+  &:focus-visible {
+    background-color: @color;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .social-list {
   .list();
 }
@@ -33,95 +70,34 @@
   margin: auto auto;
 }
 
-.social-list--big .social-list__link {
-  width: 42px;
-  height: 42px;
+.social-list--big-size .social-list__link {
+  .link-big-size();
 }
 
-.social-list--big .social-list__icon {
-  &--vk {
-    width: 21px;
-    height: 13px;
-  }
-
-  &--whatsapp {
-    width: 25px;
-    height: 25px;
-  }
-
-  &--viber {
-    width: 23px;
-    height: 22px;
-  }
+.social-list--big-size .social-list__icon {
+  .icon-big-size();
 }
 
-.social-list--changed-size .social-list__link {
+.social-list--adaptive-size .social-list__link {
   @media (max-width: (@desktop-width - 1)) {
-    width: 42px;
-    height: 42px;
+    .link-big-size();
   }
 }
 
-.social-list--changed-size .social-list__icon {
+.social-list--adaptive-size .social-list__icon {
   @media (max-width: (@desktop-width - 1)) {
-    &--vk {
-      width: 21px;
-      height: 13px;
-    }
-
-    &--whatsapp {
-      width: 25px;
-      height: 25px;
-    }
-
-    &--viber {
-      width: 23px;
-      height: 22px;
-    }
+    .icon-big-size();
   }
 }
 
 .social-list__link--vk {
-  &:hover {
-    background-color: @color-vk;
-  }
-
-  &:focus-visible {
-    background-color: @color-vk;
-    outline: none;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  .link-interactiv(@color-vk);
 }
 
 .social-list__link--whatsapp {
-  &:hover {
-    background-color: @color-whatsapp;
-  }
-
-  &:focus-visible {
-    background-color: @color-whatsapp;
-    outline: none;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  .link-interactiv(@color-whatsapp);
 }
 
 .social-list__link--viber {
-  &:hover {
-    background-color: @color-viber;
-  }
-
-  &:focus-visible {
-    background-color: @color-viber;
-    outline: none;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  .link-interactiv(@color-viber);
 }

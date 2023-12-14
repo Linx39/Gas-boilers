@@ -104,10 +104,11 @@
 
 .promotion__date {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, min-content));
+  grid-template-columns: repeat(auto-fill, minmax(50px, min-content));
   gap: 8px;
+  justify-content: center;
 
-  max-width: 280px;
+  width: 100%;
   margin-bottom: 27px;
 
   @media (min-width: @desktop-width) {

@@ -5,7 +5,7 @@ const SLIDER_TOGGLE_CURRENT_CLASS = `slider__toggle--current`;
 const SLIDER_LIST_CLASS = `slider__list`;
 const SLIDER_ITEM_CLASS = `slider__item`;
 const SLIDER_ITEM_CURRENT_CLASS = `slider__item--current`;
-const DESKTOP_WIDTH = 1300;
+const DESKTOP_WIDTH = 1280;
 
 const setSliderWidth = (slider) => {
   const sliderWrapperElement = slider.querySelector(`.${SLIDER_WRAPPER_CLASS}`);
