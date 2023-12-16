@@ -16,8 +16,10 @@
 }
 
 .slider--center .slider__list {
-  display: flex;
-  justify-content: center;
+  @media (max-width: (@desktop-width - 1)) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .slider__toggles {
@@ -29,7 +31,9 @@
 }
 
 .slider--center .slider__toggles {
-  display: none;
+  @media (max-width: (@desktop-width - 1)) {
+    display: none;
+  }
 }
 
 .slider__toggle {

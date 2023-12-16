@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   box-sizing: border-box;
   min-height: 804px;
 
@@ -30,6 +31,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .wrapper();
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 18px;
   padding-bottom: 133px;
 
@@ -39,8 +44,7 @@
 }
 
 .page-header__tittle {
-  max-width: 593px;
-  padding: 0 55px;
+  max-width: 480px;
   margin: 0;
   margin-bottom: 30px;
 
@@ -51,6 +55,7 @@
   text-align: center;
 
   @media (min-width: @desktop-width) {
+    max-width: 600px;
     margin-bottom: 24px;
 
     font-size: 65px;
@@ -64,8 +69,6 @@
   order: -1;
 
   margin-bottom: 34px;
-  padding-left: @mobile-padding;
-  padding-right: @mobile-padding;
   padding-top: 40px;
 
   background-image: url("../../img/icons/handset.svg");

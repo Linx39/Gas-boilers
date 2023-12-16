@@ -19,12 +19,14 @@
 }
 
 .wrapper {
+  box-sizing: border-box;
   padding: 0 @mobile-padding;
 
   @media (min-width: @desktop-width) {
-    width: 1240px;
+    width: 100%;
+    max-width: @desktop-content;
+    padding: 0 @desktop-padding;
     margin: 0 auto;
-    // padding: 0 @desktop-padding;
   }
 }
 

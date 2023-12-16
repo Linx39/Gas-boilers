@@ -1,8 +1,4 @@
-.main-nav {
-  position: relative;
-}
-
-.main-nav--opened .main-nav__bar {
+.main-nav--opened {
   @media (max-width: (@desktop-width - 1)) {
     position: absolute;
     top: 0;
@@ -14,47 +10,63 @@
   }
 }
 
-.main-nav__top-bar {
+.main-nav__top {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  .wrapper();
-  padding-top: 26px;
-  padding-bottom: 26px;
 
   &::after {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 0;
     content: "";
+
+    display: none;
+    width: 250px;
+    height: 0;
+    margin: 0 auto;
+
+    border-bottom: 2px solid @color-white;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 12px;
-    padding-bottom: 11px;
-
     &::after {
+      display: block;
       width: 100%;
+
       border-bottom: 1px solid @color-white;
     }
   }
 }
 
-.main-nav--opened .main-nav__top-bar {
+.main-nav--opened .main-nav__top {
+  @media (max-width: (@desktop-width - 1)) {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.main-nav__top-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .wrapper();
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+}
+
+.main-nav--opened .main-nav__top-wrapper {
   @media (max-width: (@desktop-width - 1)) {
     flex-direction: column;
     padding-top: 82px;
     padding-bottom: 33px;
-
-    &::after {
-      width: 250px;
-      border-bottom: 2px solid @color-white;
-      margin: 0 auto;
-    }
   }
 }
 
@@ -119,6 +131,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+
   margin: auto;
 }
 
@@ -170,25 +183,33 @@
   }
 }
 
-.main-nav__bottom-bar {
+.main-nav__bottom {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__bottom {
+  display: block;
+}
+
+.main-nav__bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .wrapper();
+  padding-top: 20px;
+  padding-bottom: 25px;
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding-top: 20px;
-  }
-}
 
-.main-nav--opened .main-nav__bottom-bar {
-  @media (max-width: (@desktop-width - 1)) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-top: 20px;
-    padding-bottom: 25px;
   }
 }
 

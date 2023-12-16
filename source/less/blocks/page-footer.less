@@ -5,6 +5,11 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 @desktop-padding;
     padding-top: 38px;
     padding-bottom: 33px;
@@ -88,12 +93,13 @@
 }
 
 .page-footer__map {
+  z-index: 0;
+  
   width: 100%;
   height: 440px;
 
   @media (min-width: @desktop-width) {
     border-radius: 80px;
-    z-index: 0;
   }
 }
 
