@@ -20,11 +20,7 @@ const brendSliders = [...brendSliderElements].map((element) => getSlider(element
 const accessorySlider = getSlider(accessorySliderElement, ITEM_ACCESSORY_CURRENT_CLASS);
 const sliders = [...brendSliders, accessorySlider];
 
-sliders.forEach((slider) => {
-  const {sliderElement, itemCurrentClass} = slider;
-
-  controlSlider(sliderElement, itemCurrentClass);
-});
+sliders.forEach(({slider, itemCurrentClass}) => controlSlider(slider, itemCurrentClass));
 
 
 // Загрузка карты

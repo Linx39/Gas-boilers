@@ -3,9 +3,9 @@ export const changeItemCurrent = (itemCurrentPrev, itemCurrentNext, itemCurrentC
   itemCurrentNext.classList.add(itemCurrentClass);
 }
 
-export const getSlider = (element, itemCurrentClassName) => {
+export const getSlider = (sliderElement, itemCurrentClassName) => {
   return {
-    sliderElement: element,
+    slider: sliderElement,
     itemCurrentClass: itemCurrentClassName,
   };
 }
