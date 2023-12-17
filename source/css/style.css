@@ -1776,22 +1776,41 @@ img {
 }
 .page-footer__map-container {
   position: relative;
-  width: 100%;
 }
 @media (min-width: 1320px) {
   .page-footer__map-container {
     outline: 3px solid #73C1F2;
-    border-radius: 80px;
+    border-radius: 60px;
   }
 }
 .page-footer__map {
   z-index: 0;
   width: 100%;
-  height: 440px;
+  min-height: 325px;
+  height: auto;
 }
 @media (min-width: 1320px) {
   .page-footer__map {
-    border-radius: 80px;
+    width: 990px;
+    height: 440px;
+    border-radius: 60px;
+  }
+}
+.page-footer__map-img {
+  display: none;
+}
+.page-footer__map--nojs .page-footer__map-img {
+  display: block;
+}
+.page-footer__map-img img {
+  width: 430px;
+  height: 325px;
+  margin: 0 auto;
+}
+@media (min-width: 1320px) {
+  .page-footer__map-img img {
+    width: 100%;
+    height: 440px;
   }
 }
 .page-footer__map-button {

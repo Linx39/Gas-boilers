@@ -1145,7 +1145,16 @@
       </div>
 
       <div class="page-footer__map-container">
-        <div class="page-footer__map" id="map" style="height: 440px;"></div>
+        <div class="page-footer__map page-footer__map--nojs" id="map">
+          <div class="page-footer__map-img">
+            <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1280px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+              <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="Карта с адресом.">
+            </picture>
+          </div>
+        </div>
 
         <button class="page-footer__map-button app-button app-button--call app-interactive app-interactive--call app-interactive--small" type="button">
           <span class="visually-hidden">Заказать звонок</span>
@@ -1185,7 +1194,6 @@
 
           <div class="consultation__answer">
             <h2 class="consultation__tittle consultation__tittle--answer">Спасибо за обращение</h2>
-
             <p class="consultation__description">Специалист свяжется с вами в удобное для вас время</p>
           </div>
         </section>

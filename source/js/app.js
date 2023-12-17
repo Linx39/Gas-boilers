@@ -24,8 +24,10 @@ sliders.forEach(({slider, itemCurrentClass}) => controlSlider(slider, itemCurren
 
 
 // Загрузка карты
+const pageFooterMap = document.querySelector(`.page-footer__map`);
 const contactsAdressElements = document.querySelectorAll(`.contacts__item--adress`);
 
+pageFooterMap.classList.remove(`page-footer__map--nojs`);
 loadMap();
 
 contactsAdressElements.forEach((adress) => {
