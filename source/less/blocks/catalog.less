@@ -36,13 +36,16 @@
 }
 
 .catalog__brend-wrapper {
-  box-sizing: border-box;
   .wrapper();
-  width: calc(100vw - 30px);
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 36px;
-  overflow: hidden;
+}
+
+.catalog__brend-list {
+  @media (max-width: (@desktop-width - 1)) {
+    width: @mobile-width - 32px;
+  }
 }
 
 .catalog__toggles {
@@ -57,4 +60,3 @@
 .catalog__products {
   .wrapper();
 }
-

@@ -34,4 +34,3 @@ export const setConsultationFormSubmit = () => {
     consultation.classList.add(CONSULTATION_SUCCESS_CLASS);
   });
 }
-

@@ -1,3 +1,11 @@
+.slider__wrapper {
+  overflow: hidden;
+}
+
+.slider--nojs .slider__wrapper {
+  overflow: auto;
+}
+
 .slider__list {
   .list();
   display: grid;
@@ -30,7 +38,8 @@
   justify-content: center;
 }
 
-.slider--center .slider__toggles {
+.slider--center .slider__toggles,
+.slider--nojs .slider__toggles {
   @media (max-width: (@desktop-width - 1)) {
     display: none;
   }

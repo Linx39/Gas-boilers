@@ -1,7 +1,7 @@
 import {handleMainNavToogleClick} from './main-nav-toggle.js';
 import {controlSlider} from './slider.js';
 import {loadMap, setMapViewCenter} from './map.js';
-import {openModal, closeModal} from './modal.js';
+import {controlModal} from './modal.js';
 import {setConsultationFormSubmit, checkConsultationField, setConsultationFormDefault} from './consultation.js';
 import {getSlider } from './utils.js';
 
@@ -14,7 +14,7 @@ const ITEM_BREND_CURRENT_CLASS = `brend-list__item--current`;
 const ITEM_ACCESSORY_CURRENT_CLASS = `accessory-list__item--current`;
 
 const brendSliderElements = document.querySelectorAll(`.catalog__brend`);
-const accessorySliderElement = document.querySelector(`.sub-catalog`);
+const accessorySliderElement = document.querySelector(`.sub-catalog__accessory`);
 
 const brendSliders = [...brendSliderElements].map((element) => getSlider(element, ITEM_BREND_CURRENT_CLASS));
 const accessorySlider = getSlider(accessorySliderElement, ITEM_ACCESSORY_CURRENT_CLASS);
@@ -37,9 +37,8 @@ contactsAdressElements.forEach((adress) => {
 
 // Управление открытием/закрытием модального окна
 const callButtons= document.querySelectorAll(['.app-button--call', '.app-button--staff']);
-callButtons.forEach((button) =>  openModal(button));
 
-closeModal(setConsultationFormDefault);
+controlModal(callButtons, setConsultationFormDefault);
 
 
 // Управление формой

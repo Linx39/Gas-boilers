@@ -1,5 +1,6 @@
-import {changeItemCurrent} from "./utils.js";
+import {changeElementCurrent} from "./utils.js";
 
+const SLIDER_NOJS_CLASS = `slider--nojs`;
 const SLIDER_WRAPPER_CLASS = `slider__wrapper`;
 const SLIDER_CENTER_CLASS = `slider--center`;
 const SLIDER_TOGGLE_CLASS = `slider__toggle`;
@@ -20,8 +21,7 @@ const changeSliderPosition = (listElement, items, index) => {
   listElement.style.transform = `translateX(${-sliderPosition}px)`;
 }
 
-const setSliderProperties = ({slider, listElement, items, toggles, itemCurrentClass}) => {
-  const sliderWrapperElement = slider.querySelector(`.${SLIDER_WRAPPER_CLASS}`);
+const setSliderProperties = ({slider, sliderWrapperElement, listElement, items, toggles, itemCurrentClass}) => {
   const mediaQuery = window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`)
 
   if(mediaQuery.matches) {
@@ -58,7 +58,7 @@ const setSliderProperties = ({slider, listElement, items, toggles, itemCurrentCl
 }
 
 
-const handleSliderTogglesClick = ({slider, listElement, items, toggles, itemCurrentClass}) => {
+const handleSliderElementsClick = ({slider, listElement, items, toggles, itemCurrentClass}) => {
   const translateSlider = (evt) => {
     const toggleCurrent = slider.querySelector(`.${SLIDER_TOGGLE_CURRENT_CLASS}`);
     const itemCurrent = slider.querySelector(`.${SLIDER_ITEM_CURRENT_CLASS}`);
@@ -71,22 +71,30 @@ const handleSliderTogglesClick = ({slider, listElement, items, toggles, itemCurr
 
     changeSliderPosition(listElement, items, indexSelected);
 
-    changeItemCurrent(toggleCurrent, evt.target, SLIDER_TOGGLE_CURRENT_CLASS);
-    changeItemCurrent(itemCurrent, items[indexSelected], SLIDER_ITEM_CURRENT_CLASS);
-    changeItemCurrent(itemCurrent, items[indexSelected], itemCurrentClass);
+    changeElementCurrent(toggleCurrent, toggles[indexSelected], SLIDER_TOGGLE_CURRENT_CLASS);
+    changeElementCurrent(itemCurrent, items[indexSelected], SLIDER_ITEM_CURRENT_CLASS);
+    changeElementCurrent(itemCurrent, items[indexSelected], itemCurrentClass);
   }
 
   toggles.forEach((toggle) => {
     toggle.addEventListener('click', translateSlider);
   })
+
+  items.forEach((item) => {
+    item.addEventListener('click', translateSlider);
+  })
 }
 
 export const controlSlider = (slider, itemCurrentClass) => {
+  const sliderWrapperElement = slider.querySelector(`.${SLIDER_WRAPPER_CLASS}`);
   const listElement = slider.querySelector(`.${SLIDER_LIST_CLASS}`);
   const items = slider.querySelectorAll(`.${SLIDER_ITEM_CLASS}`);
   const toggles = slider.querySelectorAll(`.${SLIDER_TOGGLE_CLASS}`);
 
-  const sliderObject = {slider, listElement, items, toggles, itemCurrentClass};
+  slider.classList.remove(SLIDER_NOJS_CLASS);
+  listElement.style.width = `auto`;
+
+  const sliderObject = {slider, sliderWrapperElement, listElement, items, toggles, itemCurrentClass};
 
   setSliderProperties(sliderObject);
 
@@ -94,5 +102,5 @@ export const controlSlider = (slider, itemCurrentClass) => {
       setSliderProperties(sliderObject);
   });
 
-  handleSliderTogglesClick(sliderObject);
+  handleSliderElementsClick(sliderObject);
 }

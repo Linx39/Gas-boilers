@@ -10,7 +10,7 @@
 
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__top">
           <div class="main-nav__top-wrapper">
             <button class="main-nav__toggle" type="button">
@@ -133,9 +133,9 @@
         </ul>
 
         <div class="page-header__buttons-container">
-          <button class="page-header__button page-header__button--call app-button app-button--call app-interactive app-interactive--call" type="button">Заказать звонок</button>
+          <a class="page-header__button page-header__button--call app-button app-button--call app-interactive app-interactive--call" href="#consultation">Заказать звонок</a>
           <a class="page-header__button page-header__button--catalog app-button app-button--catalog app-interactive app-interactive--catalog" href="#catalog-item-1">Каталог продукции</a>
-          <button class="page-header__button page-header__button--staff app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+          <a class="page-header__button page-header__button--staff app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
         </div>
       </div>
     </header>
@@ -146,7 +146,7 @@
           <div class="promotion__content">
             <h2 class="promotion__title">Газовые котлы THERMEX в&nbsp;августе со скидкой 10% </h2>
 
-            <button class="promotion__button app-button app-button--call app-button--form app-interactive app-interactive--call app-interactive--border" type="button">Заказать звонок</button>
+            <a class="promotion__button app-button app-button--call app-button--form app-interactive app-interactive--call app-interactive--border" href="#consultation">Заказать звонок</a>
 
             <p class="promotion__slogan"><time datetime="2024-01-25 09:00:00"></time>До конца акции осталось</p>
 
@@ -176,7 +176,7 @@
         <div class="catalog__item" id="catalog-item-1">
           <h2 class="catalog__title">Газовые котлы ведущих производителей</h2>
 
-          <div class="catalog__brend slider" id="brend">
+          <div class="catalog__brend slider slider--nojs" id="brend">
             <div class="catalog__brend-wrapper slider__wrapper">
               <ul class="catalog__brend-list brend-list slider__list">
                 <li class="brend-list__item brend-list__item--current slider__item slider__item--current">
@@ -243,9 +243,9 @@
               <li class="products__item">
                 <div class="products__img">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/products-1/thermex-desktop.webp 1x, img/products-1/thermex-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1320px)" srcset="img/products-1/thermex-desktop.webp 1x, img/products-1/thermex-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/products-1/thermex-mobile.webp 1x, img/products-1/thermex-mobile@2x.webp 2x">
-                    <source media="(min-width: 1280px)" srcset="img/products-1/thermex-desktop.png 1x, img/products-1/thermex-desktop@2x.jpg 2x">
+                    <source media="(min-width: 1320px)" srcset="img/products-1/thermex-desktop.png 1x, img/products-1/thermex-desktop@2x.jpg 2x">
                     <img src="img/products-1/thermex-mobile.png" srcset="img/products-1/thermex-mobile@2x.png 2x" alt="Фото товара.">
                   </picture>
                 </div>
@@ -301,7 +301,7 @@
                   <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
 
                   <div class="products__buttons-container">
-                    <button class="products__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+                    <a class="products__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
                     <a class="products__button app-button app-interactive app-interactive--buy" href="#">Купить сейчас</a>
                   </div>
 
@@ -339,9 +339,9 @@
               <li class="products__item">
                 <div class="products__img">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/products-1/mizudo-desktop.webp 1x, img/products-1/mizudo-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1320px)" srcset="img/products-1/mizudo-desktop.webp 1x, img/products-1/mizudo-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/products-1/mizudo-mobile.webp 1x, img/products-1/mizudo-mobile@2x.webp 2x">
-                    <source media="(min-width: 1280px)" srcset="img/products-1/mizudo-desktop.png 1x, img/products-1/mizudo-desktop@2x.jpg 2x">
+                    <source media="(min-width: 1320px)" srcset="img/products-1/mizudo-desktop.png 1x, img/products-1/mizudo-desktop@2x.jpg 2x">
                     <img src="img/products-1/mizudo-mobile.png" srcset="img/products-1/mizudo-mobile@2x.png 2x" alt="Фото товара.">
                   </picture>
                 </div>
@@ -396,7 +396,7 @@
                   <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
 
                   <div class="products__buttons-container">
-                    <button class="products__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+                    <a class="products__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
                     <a class="products__button app-button app-button--buy app-interactive app-interactive--buy" href="#">Купить сейчас</a>
                   </div>
 
@@ -434,9 +434,9 @@
               <li class="products__item">
                 <div class="products__img">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/products-1/navien-desktop.webp 1x, img/products-1/navien-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1320px)" srcset="img/products-1/navien-desktop.webp 1x, img/products-1/navien-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/products-1/navien-mobile.webp 1x, img/products-1/navien-mobile@2x.webp 2x">
-                    <source media="(min-width: 1280px)" srcset="img/products-1/navien-desktop.png 1x, img/products-1/navien-desktop@2x.jpg 2x">
+                    <source media="(min-width: 1320px)" srcset="img/products-1/navien-desktop.png 1x, img/products-1/navien-desktop@2x.jpg 2x">
                     <img src="img/products-1/navien-mobile.png" srcset="img/products-1/navien-mobile@2x.png 2x" alt="Фото товара.">
                   </picture>
                 </div>
@@ -490,7 +490,7 @@
                   <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
 
                   <div class="products__buttons-container">
-                    <button class="products__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+                    <a class="products__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
                     <a class="products__button app-button app-button--buy app-interactive app-interactive--buy" href="#">Купить сейчас</a>
                   </div>
 
@@ -528,9 +528,9 @@
               <li class="products__item">
                 <div class="products__img">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/products-1/baxi-desktop.webp 1x, img/products-1/baxi-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1320px)" srcset="img/products-1/baxi-desktop.webp 1x, img/products-1/baxi-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/products-1/baxi-mobile.webp 1x, img/products-1/baxi-mobile@2x.webp 2x">
-                    <source media="(min-width: 1280px)" srcset="img/products-1/baxi-desktop.png 1x, img/products-1/baxi-desktop@2x.jpg 2x">
+                    <source media="(min-width: 1320px)" srcset="img/products-1/baxi-desktop.png 1x, img/products-1/baxi-desktop@2x.jpg 2x">
                     <img src="img/products-1/baxi-mobile.png" srcset="img/products-1/baxi-mobile@2x.png 2x" alt="Фото товара.">
                   </picture>
                 </div>
@@ -586,7 +586,7 @@
                   <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
 
                   <div class="products__buttons-container">
-                    <button class="products__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+                    <a class="products__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
                     <a class="products__button app-button app-button--buy app-interactive app-interactive--buy" href="#">Купить сейчас</a>
                   </div>
 
@@ -627,7 +627,7 @@
         <div class="catalog__item" id="catalog-item-2">
           <h2 class="catalog__title">Бойлеры косвенного нагрева</h2>
 
-          <div class="catalog__brend slider">
+          <div class="catalog__brend slider slider--nojs">
             <div class="catalog__brend-wrapper slider__wrapper">
               <ul class="catalog__brend-list brend-list slider__list">
                 <li class="brend-list__item brend-list__item--current slider__item slider__item--current">
@@ -681,9 +681,9 @@
               <li class="products__item">
                 <div class="products__img">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/products-2/thermex-desktop.webp 1x, img/products-2/thermex-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1320px)" srcset="img/products-2/thermex-desktop.webp 1x, img/products-2/thermex-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/products-2/thermex-mobile.webp 1x, img/products-2/thermex-mobile@2x.webp 2x">
-                    <source media="(min-width: 1280px)" srcset="img/products-2/thermex-desktop.png 1x, img/products-2/thermex-desktop@2x.jpg 2x">
+                    <source media="(min-width: 1320px)" srcset="img/products-2/thermex-desktop.png 1x, img/products-2/thermex-desktop@2x.jpg 2x">
                     <img src="img/products-2/thermex-mobile.png" srcset="img/products-2/thermex-mobile@2x.png 2x" alt="Фото товара.">
                   </picture>
                 </div>
@@ -739,7 +739,7 @@
                   <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
 
                   <div class="products__buttons-container">
-                    <button class="products__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+                    <a class="products__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
                     <a class="products__button app-button app-interactive app-interactive--buy" href="#">Купить сейчас</a>
                   </div>
 
@@ -777,9 +777,9 @@
               <li class="products__item">
                 <div class="products__img">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/products-2/hajdu-desktop.webp 1x, img/products-2/hajdu-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1320px)" srcset="img/products-2/hajdu-desktop.webp 1x, img/products-2/hajdu-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/products-2/hajdu-mobile.webp 1x, img/products-2/hajdu-mobile@2x.webp 2x">
-                    <source media="(min-width: 1280px)" srcset="img/products-2/hajdu-desktop.png 1x, img/products-2/hajdu-desktop@2x.jpg 2x">
+                    <source media="(min-width: 1320px)" srcset="img/products-2/hajdu-desktop.png 1x, img/products-2/hajdu-desktop@2x.jpg 2x">
                     <img src="img/products-2/hajdu-mobile.png" srcset="img/products-2/hajdu-mobile@2x.png 2x" alt="Фото товара.">
                   </picture>
                 </div>
@@ -833,7 +833,7 @@
                   <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
 
                   <div class="products__buttons-container">
-                    <button class="products__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+                    <a class="products__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
                     <a class="products__button app-button app-button--buy app-interactive app-interactive--buy" href="#">Купить сейчас</a>
                   </div>
 
@@ -871,9 +871,9 @@
               <li class="products__item">
                 <div class="products__img">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/products-2/royal-desktop.webp 1x, img/products-2/royal-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1320px)" srcset="img/products-2/royal-desktop.webp 1x, img/products-2/royal-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/products-2/royal-mobile.webp 1x, img/products-2/royal-mobile@2x.webp 2x">
-                    <source media="(min-width: 1280px)" srcset="img/products-2/royal-desktop.png 1x, img/products-2/royal-desktop@2x.jpg 2x">
+                    <source media="(min-width: 1320px)" srcset="img/products-2/royal-desktop.png 1x, img/products-2/royal-desktop@2x.jpg 2x">
                     <img src="img/products-2/royal-mobile.png" srcset="img/products-2/royal-mobile@2x.png 2x" alt="Фото товара.">
                   </picture>
                 </div>
@@ -929,7 +929,7 @@
                   <h4 class="products__info-title">Получи индивидуальное<br> предложение</h4>
 
                   <div class="products__buttons-container">
-                    <button class="products__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+                    <a class="products__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
                     <a class="products__button app-button app-button--buy app-interactive app-interactive--buy" href="#">Купить сейчас</a>
                   </div>
 
@@ -973,7 +973,7 @@
           <div class="offer__content">
             <h2 class="offer__title">Консультация по&nbsp;оборудованию специально для вас</h2>
 
-            <button class="offer__button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+            <a class="offer__button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
           </div>
         </div>
       </section>
@@ -983,9 +983,9 @@
           Газовое оборудование для обвязки частных и жилых многоквартирных домов
         </h2>
 
-        <div class="sub-catalog__accessory slider">
+        <div class="sub-catalog__accessory slider slider--nojs">
           <div class="sub-catalog__wrapper slider__wrapper">
-            <ul class="accessory-list slider__list">
+            <ul class="sub-catalog__accessory-list accessory-list slider__list">
               <li class="accessory-list__item accessory-list__item--current slider__item slider__item--current">
                 <div class="accessory-list__img">
                   <picture>
@@ -1140,29 +1140,31 @@
             </ul>
           </div>
 
-          <button class="page-footer__content-button app-button app-button--staff app-interactive app-interactive--staff" type="button">Консультация</button>
+          <a class="page-footer__content-button app-button app-button--staff app-interactive app-interactive--staff" href="#consultation">Консультация</a>
         </div>
       </div>
 
       <div class="page-footer__map-container">
-        <div class="page-footer__map page-footer__map--nojs" id="map">
+        <div class="page-footer__map page-footer__map--nojs">
+          <div class="page-footer__map-interactiv" id="map"></div>
+
           <div class="page-footer__map-img">
             <picture>
-              <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1320px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
               <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-              <source media="(min-width: 1280px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+              <source media="(min-width: 1320px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
               <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="Карта с адресом.">
             </picture>
           </div>
         </div>
 
-        <button class="page-footer__map-button app-button app-button--call app-interactive app-interactive--call app-interactive--small" type="button">
+        <a class="page-footer__map-button app-button app-button--call app-interactive app-interactive--call app-interactive--small" href="#consultation">
           <span class="visually-hidden">Заказать звонок</span>
-        </button>
+        </a>
       </div>
     </footer>
 
-    <div class="modal modal--closed">
+    <div class="modal modal--closed modal--nojs" id="consultation">
       <div class="modal__wrapper">
         <button class="modal__button" type="button">
           <svg class="modal__button-icon" width="15" height="15" aria-hidden="true" focusable="false">

@@ -1,4 +1,4 @@
-export const changeItemCurrent = (itemCurrentPrev, itemCurrentNext, itemCurrentClass) => {
+export const changeElementCurrent = (itemCurrentPrev, itemCurrentNext, itemCurrentClass) => {
   itemCurrentPrev.classList.remove(itemCurrentClass);
   itemCurrentNext.classList.add(itemCurrentClass);
 }
@@ -10,3 +10,7 @@ export const getSlider = (sliderElement, itemCurrentClassName) => {
   };
 }
 
+export const isEscEvent = (evt) => {
+  console.log(evt);
+  return evt.key === 'Escape' || evt.key === 'Esc';
+};

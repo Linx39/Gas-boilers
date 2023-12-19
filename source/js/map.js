@@ -1,10 +1,12 @@
+const mapContainerId =`map`;
 const MAP_LAYER = `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`;
 const MAP_ATTRIBUTION = `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`;
 const SCALE = 16;
 const CenterCoordinates = {
-  LAT: 59.092413,
-  LNG: 37.906381,
+  LAT: 59.092016,
+  LNG: 37.902289,
 };
+
 const AddressCoordinates = {
   LAT: 59.092002,
   LNG: 37.898844,
@@ -16,7 +18,7 @@ const mapIcon = L.icon({
   iconAnchor: [26, 52],
 });
 
-const map = L.map(`map`, {zoomControl: false});
+const map = L.map(mapContainerId, {zoomControl: false});
 
 const addressMarker = L.marker(
   {
