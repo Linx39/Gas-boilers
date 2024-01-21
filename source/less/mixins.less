@@ -37,3 +37,48 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+.interactive-style-font {
+  &:hover {
+    color: @color-light-blue;
+  }
+
+  &:focus-visible {
+    color: @color-light-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: @color-light-blue;
+    opacity: 0.3;
+  }
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+
+  color: @color-blue;
+  border-radius: 50%;
+  background-color: @color-white;
+
+  &:hover {
+    color: @color-white;
+    background-color: @color-blue;
+    border: 1px solid @color-white;
+  }
+
+  &:focus-visible {
+    color: @color-white;
+    background-color: @color-blue;
+    border: 1px solid @color-white;
+    outline: none;
+  }
+
+  &:active {
+    color: @color-white;
+    background-color: @color-blue;
+    border: 1px solid @color-white;
+    opacity: 0.3;
+  }
+}

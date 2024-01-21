@@ -79,10 +79,6 @@ const handleSliderElementsClick = ({slider, listElement, items, toggles, itemCur
   toggles.forEach((toggle) => {
     toggle.addEventListener('click', translateSlider);
   })
-
-  items.forEach((item) => {
-    item.addEventListener('click', translateSlider);
-  })
 }
 
 export const controlSlider = (slider, itemCurrentClass) => {
