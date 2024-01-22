@@ -13,7 +13,7 @@ const AddressCoordinates = {
 };
 
 const mapIcon = L.icon({
-  iconUrl: '../img/icons/bullet.svg',
+  iconUrl: 'img/icons/bullet.svg',
   iconSize: [52, 52],
   iconAnchor: [26, 52],
 });
